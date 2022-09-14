@@ -7,16 +7,9 @@ import Clock from "../../components/Home/Clock";
 import Layout from "../../components/Layout";
 import ConfigProvider from "../../components/ConfigProvider";
 import { VStack } from "@chakra-ui/react";
-import { Language } from "../../langs";
-import { Config } from "../../utils/config";
-import { render } from "../../utils/render";
+import { render, RenderProps } from "../../utils/render";
 
-type Props = {
-  language: Language | null;
-  config: Config | null;
-};
-
-const Home = ({ language, config }: Props) => {
+const Home = ({ language, config }: RenderProps) => {
   return (
     <ConfigProvider initial={config} language={language}>
       <Layout>
@@ -32,7 +25,4 @@ const Home = ({ language, config }: Props) => {
   );
 };
 
-render(Home, {
-  language: "en-US",
-  config: null,
-});
+render(Home).then();

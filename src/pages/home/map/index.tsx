@@ -4,19 +4,12 @@ import Layout from "../../../components/Layout";
 import TaskListOverlay from "../../../components/MapPage/TaskListOverlay";
 import HeaderOverlay from "../../../components/MapPage/HeaderOverlay";
 import { chakra } from "@chakra-ui/react";
-import { Language } from "../../../langs";
-import { Config } from "../../../utils/config";
 import MapCore from "../../../components/Map";
-import { render } from "../../../utils/render";
+import { render, RenderProps } from "../../../utils/render";
 
-type Props = {
-  language: Language | null;
-  data: Config | null;
-};
-
-const Map = ({ language, data }: Props) => {
+const Map = ({ language, config }: RenderProps) => {
   return (
-    <ConfigProvider initial={data} language={language}>
+    <ConfigProvider initial={config} language={language}>
       <Layout title={["Map"]} header={false} footer={false} background={false}>
         <HeaderOverlay />
         <TaskListOverlay />
@@ -34,4 +27,4 @@ const Map = ({ language, data }: Props) => {
   );
 };
 
-render(Map, { language: "en-US", data: null });
+render(Map).then();

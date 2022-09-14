@@ -466,7 +466,7 @@ msgctxt "components.Home.RealmCurrency.EstimatorByCurrency.5921a5"
 msgid "{value} in {time}"
 msgstr ""
 
-#: src/components/Home/RealmCurrency/EstimatorByTime.tsx:66
+#: src/components/Home/RealmCurrency/EstimatorByTime.tsx:67
 msgctxt "components.Home.RealmCurrency.EstimatorByTime.f0f932"
 msgid "{value} in {duration}"
 msgstr ""
@@ -511,7 +511,7 @@ msgctxt "components.Home.Resin.EstimatorByResin.5921a5"
 msgid "{value} in {time}"
 msgstr ""
 
-#: src/components/Home/Resin/EstimatorByTime.tsx:61
+#: src/components/Home/Resin/EstimatorByTime.tsx:62
 msgctxt "components.Home.Resin.EstimatorByTime.f0f932"
 msgid "{value} in {duration}"
 msgstr ""
@@ -4136,32 +4136,32 @@ msgctxt "db.weapons.ffe36a"
 msgid "Beginner's Protector"
 msgstr ""
 
-#: src/pages/customize/artifacts/index.tsx:53
+#: src/pages/customize/artifacts/index.tsx:46
 msgctxt "pages.customize.artifacts.index.146974"
 msgid "artifact"
 msgstr ""
 
-#: src/pages/customize/artifacts/index.tsx:66
+#: src/pages/customize/artifacts/index.tsx:59
 msgctxt "pages.customize.artifacts.index.f87fc3"
 msgid "No such artifact."
 msgstr ""
 
-#: src/pages/customize/characters/index.tsx:99
+#: src/pages/customize/characters/index.tsx:92
 msgctxt "pages.customize.characters.index.9bd832"
 msgid "No such character."
 msgstr ""
 
-#: src/pages/customize/characters/index.tsx:54
+#: src/pages/customize/characters/index.tsx:47
 msgctxt "pages.customize.characters.index.e5ae51"
 msgid "character"
 msgstr ""
 
-#: src/pages/customize/weapons/index.tsx:75
+#: src/pages/customize/weapons/index.tsx:68
 msgctxt "pages.customize.weapons.index.6a78b3"
 msgid "No such weapon."
 msgstr ""
 
-#: src/pages/customize/weapons/index.tsx:56
+#: src/pages/customize/weapons/index.tsx:49
 msgctxt "pages.customize.weapons.index.78facd"
 msgid "weapon"
 msgstr ""

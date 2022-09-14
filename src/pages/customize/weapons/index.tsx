@@ -13,22 +13,15 @@ import {
   FormattedMessage as FormattedMessageId,
 } from "react-intl";
 import { DomainOfForgery } from "../../../db/domainCategories";
-import { Language } from "../../../langs";
 import LeakedWarning from "../../../components/Customize/LeakedWarning";
-import { Config, DefaultConfig } from "../../../utils/config";
-import { render } from "../../../utils/render";
+import { render, RenderProps } from "../../../utils/render";
 
-type Props = {
-  language: Language | null;
-  data: Config;
-};
-
-const WeaponInfo = ({ language, data }: Props) => {
+const WeaponInfo = ({ language, config }: RenderProps) => {
   const name = new URL(window.location.href).searchParams.get("name");
   const weapon = Weapons.find((weapon) => weapon.name === name);
 
   return (
-    <ConfigProvider initial={data} language={language}>
+    <ConfigProvider initial={config} language={language}>
       <Layout title={[weapon?.name || "Not Found"]}>
         {weapon ? (
           <VStack align="stretch" spacing={4}>
@@ -80,4 +73,4 @@ const WeaponInfo = ({ language, data }: Props) => {
   );
 };
 
-render(WeaponInfo, { language: "en-US", data: DefaultConfig });
+render(WeaponInfo).then();

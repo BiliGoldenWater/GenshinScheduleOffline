@@ -10,22 +10,15 @@ import CommonMaterialDisplay from "../../../components/Customize/CharacterInfo/C
 import NoteInput from "../../../components/Customize/CharacterInfo/NoteInput";
 import { FormattedMessage } from "react-intl";
 import { DomainOfMastery } from "../../../db/domainCategories";
-import { Language } from "../../../langs";
 import LeakedWarning from "../../../components/Customize/LeakedWarning";
-import { Config, DefaultConfig } from "../../../utils/config";
-import { render } from "../../../utils/render";
+import { render, RenderProps } from "../../../utils/render";
 
-type Props = {
-  language: Language | null;
-  data: Config;
-};
-
-const CharacterInfo = ({ language, data }: Props) => {
+const CharacterInfo = ({ language, config }: RenderProps) => {
   const name = new URL(window.location.href).searchParams.get("name");
   const character = Characters.find((character) => character.name === name);
 
   return (
-    <ConfigProvider initial={data} language={language}>
+    <ConfigProvider initial={config} language={language}>
       <Layout title={[character?.name || "Not Found"]}>
         {character ? (
           <VStack align="stretch" spacing={4}>
@@ -104,4 +97,4 @@ const CharacterInfo = ({ language, data }: Props) => {
   );
 };
 
-render(CharacterInfo, { language: "en-US", data: DefaultConfig });
+render(CharacterInfo).then();

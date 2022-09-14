@@ -13,21 +13,14 @@ import {
   FormattedMessage as FormattedMessageId,
 } from "react-intl";
 import { DomainOfBlessing } from "../../../db/domainCategories";
-import { Language } from "../../../langs";
-import { Config } from "../../../utils/config";
-import { render } from "../../../utils/render";
+import { render, RenderProps } from "../../../utils/render";
 
-type Props = {
-  language: Language | null;
-  data: Config | null;
-};
-
-const ArtifactInfo = ({ language, data }: Props) => {
+const ArtifactInfo = ({ language, config }: RenderProps) => {
   const name = new URL(window.location.href).searchParams.get("name");
   const artifact = Artifacts.find((artifact) => artifact.name === name);
 
   return (
-    <ConfigProvider initial={data} language={language}>
+    <ConfigProvider initial={config} language={language}>
       <Layout title={[artifact?.name || "Not Found"]}>
         {artifact ? (
           <WhiteCard divide>
@@ -71,4 +64,4 @@ const ArtifactInfo = ({ language, data }: Props) => {
   );
 };
 
-render(ArtifactInfo, { language: "en-US", data: null });
+render(ArtifactInfo).then();

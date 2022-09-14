@@ -40,78 +40,8 @@ const ConfigProvider = ({
       </SynchronizedConfigProvider>
     );
   } else {
-    return (
-      <LocalConfigProvider language={language || undefined}>
-        {children}
-      </LocalConfigProvider>
-    );
+    throw Error("config not inited");
   }
-};
-
-function getLocalConfig(): Config {
-  const result = { ...DefaultConfig };
-
-  for (const key of ConfigKeys) {
-    try {
-      (result as any)[key] = JSON.parse(localStorage.getItem(key) || "");
-    } catch {
-      // ignored
-    }
-  }
-
-  return result;
-}
-
-function setLocalConfig(config: Config) {
-  for (const key of ConfigKeys) {
-    const value = (config as any)[key];
-    const defaultValue = (DefaultConfig as any)[key];
-
-    if (value === defaultValue) {
-      localStorage.removeItem(key);
-    } else {
-      localStorage.setItem(key, JSON.stringify(value));
-    }
-  }
-}
-
-const LocalConfigProvider = ({
-  language,
-  children,
-}: {
-  language?: Language;
-  children?: ReactNode;
-}) => {
-  const [value, setValueCore] = useState(DefaultConfig);
-  const setValue = useCallback((newValue: SetStateAction<Config>) => {
-    if (typeof newValue === "function") {
-      newValue = newValue(getLocalConfig());
-    }
-
-    setValueCore(newValue);
-
-    // propagate local changes to other tabs by writing to storage
-    setLocalConfig(newValue);
-  }, []);
-
-  useEffect(() => {
-    const updateState = () => setValueCore(getLocalConfig());
-
-    // next.js requires server rendered markup to match the client side,
-    // but since local config is stored in localStorage, it is not accessible from the server.
-    // we use default config for the initial render, then set the correct config only on the client at the second frame
-    updateState();
-
-    // propagate changes from other tabs to local state without writing to storage
-    window.addEventListener("storage", updateState);
-    return () => window.removeEventListener("storage", updateState);
-  }, []);
-
-  return (
-    <ConfigContextRoot value={value} setValue={setValue} language={language}>
-      {children}
-    </ConfigContextRoot>
-  );
 };
 
 const SynchronizedConfigProvider = ({
@@ -165,7 +95,27 @@ const SynchronizedConfigProvider = ({
         const configs = [...configQueue];
         configQueue.length = 0;
 
-        // todo: apply configs
+        // @ts-ignore
+        if (window.__TAURI_IPC__) {
+          // tauri
+          let { BaseDirectory, readDir, createDir, writeTextFile } =
+            await import("@tauri-apps/api/fs");
+          try {
+            await readDir("", { dir: BaseDirectory.App });
+          } catch (e) {
+            await createDir("", { dir: BaseDirectory.App, recursive: true });
+          }
+          for (let cfg of configs) {
+            await writeTextFile("config.json", JSON.stringify(cfg), {
+              dir: BaseDirectory.App,
+            });
+          }
+        } else {
+          // localStorage
+          for (let cfg of configs) {
+            window.localStorage.setItem("config", JSON.stringify(cfg));
+          }
+        }
 
         await callbackPromise;
 

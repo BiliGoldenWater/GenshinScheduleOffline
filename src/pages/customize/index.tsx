@@ -7,18 +7,11 @@ import CharacterList from "../../components/Customize/CharacterList";
 import WeaponList from "../../components/Customize/WeaponList";
 import ArtifactList from "../../components/Customize/ArtifactList";
 import SettingsList from "../../components/Customize/SettingsList";
-import { Language } from "../../langs";
-import { Config } from "../../utils/config";
-import { render } from "../../utils/render";
+import { render, RenderProps } from "../../utils/render";
 
-type Props = {
-  language: Language | null;
-  data: Config | null;
-};
-
-const Customize = ({ language, data }: Props) => {
+const Customize = ({ language, config }: RenderProps) => {
   return (
-    <ConfigProvider initial={data} language={language}>
+    <ConfigProvider initial={config} language={language}>
       <Layout title={["Customize"]}>
         <VStack align="stretch" spacing={16}>
           <Search />
@@ -32,4 +25,4 @@ const Customize = ({ language, data }: Props) => {
   );
 };
 
-render(Customize, { language: "en-US", data: null });
+render(Customize).then();
