@@ -6,8 +6,8 @@
     "distDir": "../dist"
   },
   "package": {
-    "productName": "genshin-schedule",
-    "version": "0.0.0"
+    "productName": "Genshin Schedule",
+    "version": "../package.json"
   },
   "tauri": {
     "allowlist": {
@@ -16,7 +16,7 @@
     "bundle": {
       "active": true,
       "category": "DeveloperTool",
-      "copyright": "",
+      "copyright": "MIT",
       "deb": {
         "depends": []
       },
@@ -28,7 +28,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "indi.goldenwater.genshinschedule",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -57,7 +57,7 @@
         "fullscreen": false,
         "height": 600,
         "resizable": true,
-        "title": "genshin-schedule",
+        "title": "Genshin Schedule",
         "width": 800
       }
     ]

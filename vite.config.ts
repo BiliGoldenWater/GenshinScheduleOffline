@@ -3,7 +3,13 @@ import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react({
+      babel: {
+        configFile: true,
+      },
+    }),
+  ],
 
   // Vite optons tailored for Tauri development and only applied in `tauri dev` or `tauri build`
   // prevent vite from obscuring rust errors
@@ -23,5 +29,18 @@ export default defineConfig({
     minify: !process.env.TAURI_DEBUG ? "esbuild" : false,
     // produce sourcemaps for debug builds
     sourcemap: !!process.env.TAURI_DEBUG,
+
+    rollupOptions: {
+      input: [
+        "index.html",
+        "src/pages/home/index.html",
+        "src/pages/home/map/index.html",
+        "src/pages/home/statistics/index.html",
+        "src/pages/customize/index.html",
+        "src/pages/customize/artifacts/index.html",
+        "src/pages/customize/characters/index.html",
+        "src/pages/customize/weapons/index.html",
+      ],
+    },
   },
 });
