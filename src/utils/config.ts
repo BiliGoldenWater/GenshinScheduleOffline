@@ -19,8 +19,8 @@ import { CharacterBackgrounds } from "../components/Background";
 
 type MapLocation = { lat: number; lng: number };
 
-export const MapZoomMin = 4;
-export const MapZoomMax = 7;
+export const MapZoomMin = 2;
+export const MapZoomMax = 6;
 
 export type Config = {
   language: Language | "default";

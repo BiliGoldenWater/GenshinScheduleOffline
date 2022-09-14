@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import { Config, DefaultConfig } from "./config";
 import { Language, LanguageAliases } from "../langs";
+import { Helmet } from "react-helmet";
 
 const defaultLang =
   window.navigator.languages
@@ -49,6 +50,14 @@ export async function render<T extends RenderProps>(
 
   root.render(
     <ChakraProvider>
+      <Helmet>
+        <style>{`
+        @font-face {
+          font-family: "Genshin";
+          src: URL("/src/assets/fonts/Genshin.woff") format("truetype");
+        }
+        `}</style>
+      </Helmet>
       <ColorModeScript initialColorMode={"system"} />
       {/*@ts-ignore*/}
       <Element {...p} />

@@ -586,7 +586,7 @@ msgctxt "components.Home.Tasks.index.5c6f2d"
 msgid "No tasks for now."
 msgstr ""
 
-#: src/components/Home/Tasks/index.tsx:118
+#: src/components/Home/Tasks/index.tsx:117
 msgctxt "components.Home.Tasks.index.778f27"
 msgid "Open map"
 msgstr ""

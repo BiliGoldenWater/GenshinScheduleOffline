@@ -199,13 +199,16 @@ export const Markers = [
   },
 ];
 
-export const GeoMarkers = Markers.map(
-  ({ name: id, location: coordinates }) => ({
-    type: "Feature",
-    id,
-    geometry: {
-      type: "Point",
-      coordinates,
-    },
-  })
-);
+const offset = [0, 0];
+
+export const GeoMarkers = Markers.map(({ name, location }) => ({
+  name,
+  location: [location[0] + offset[0], location[1] + offset[1]],
+})).map(({ name: id, location: coordinates }) => ({
+  type: "Feature",
+  id,
+  geometry: {
+    type: "Point",
+    coordinates,
+  },
+}));

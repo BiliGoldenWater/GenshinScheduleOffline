@@ -103,7 +103,6 @@ const TaskList = () => {
             borderWidth={1}
           >
             <MapCore
-              minimal
               style={{
                 width: "100%",
                 height: "100%",
