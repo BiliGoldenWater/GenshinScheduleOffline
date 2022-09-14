@@ -61,7 +61,6 @@ const Item = ({
         bg={task.highlight ? highlightColor : undefined}
         borderRadius="sm"
         flex={1}
-        noOfLines={1}
       >
         <chakra.img
           alt={task.icon}

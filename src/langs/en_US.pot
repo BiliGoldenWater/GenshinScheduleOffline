@@ -916,7 +916,7 @@ msgctxt "components.TaskListCard.HideButton.fdf592"
 msgid "Hide temporarily"
 msgstr ""
 
-#: src/components/TaskListCard/Item.tsx:68
+#: src/components/TaskListCard/Item.tsx:67
 msgctxt "components.TaskListCard.Item.0ababe"
 msgid "Highlight task"
 msgstr ""
