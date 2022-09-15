@@ -54,7 +54,7 @@ export async function render<T extends RenderProps>(
         <style>{`
         @font-face {
           font-family: "Genshin";
-          src: URL("/src/assets/fonts/Genshin.woff") format("truetype");
+          src: URL("/fonts/Genshin.woff") format("truetype");
         }
         `}</style>
       </Helmet>

@@ -4,6 +4,7 @@ import TaskMarker from "../TaskMarker";
 import CreateButton from "./CreateButton";
 import { useMapEvent } from "react-leaflet";
 import { randomStr } from "../../../utils";
+import { latLngToPos } from "../../../db/map";
 
 const TaskCreateLayer = () => {
   const [task, setTask] = useConfig("mapCreateTask");
@@ -12,7 +13,7 @@ const TaskCreateLayer = () => {
     setTask((task) => ({
       ...task,
       id: randomStr(6),
-      location: latlng,
+      position: latLngToPos(latlng),
       visible: true,
     }));
   });

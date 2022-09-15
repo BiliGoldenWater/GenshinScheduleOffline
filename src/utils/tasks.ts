@@ -10,6 +10,8 @@ import { randomStr } from "./index";
 import { getNextRefreshTime, useServerTime } from "./time";
 import { IconNames } from "../db/icons";
 import { MemorySearch } from "./memorySearch";
+import { latLngToPos, posToLatLng } from "../db/map";
+import { LatLng } from "leaflet";
 
 const iconIndexes = IconNames.reduce((a, b, i) => {
   a[b] = i;
@@ -73,10 +75,7 @@ export function useTaskCreator() {
       setTask((task) => ({
         ...task,
         id: randomStr(6),
-        location: {
-          lat: center.lat - 1.5,
-          lng: center.lng,
-        },
+        position: latLngToPos(new LatLng(center.lat - 1.5, center.lng)),
         name: material.name,
         icon: material.item || material.name,
         description,
@@ -99,13 +98,11 @@ export function useTaskFocusSetter() {
   return useCallback(
     (task?: Task) => {
       if (task) {
+        let latLng = posToLatLng(task.position);
         setMapState({
           lat:
-            task.location.lat +
-            2.2 +
-            DefaultConfig.mapTaskDefaultZoom -
-            defaultZoom,
-          lng: task.location.lng,
+            latLng.lat + 2.2 + DefaultConfig.mapTaskDefaultZoom - defaultZoom,
+          lng: latLng.lng,
           zoom: defaultZoom,
         });
 

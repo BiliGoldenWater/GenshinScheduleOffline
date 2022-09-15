@@ -1,0 +1,647 @@
+{
+  "language": "default",
+  "server": "TW, HK, MO",
+  "theme": "dark",
+  "background": "none",
+  "lastChangelog": 41,
+  "offsetDays": 0,
+  "hiddenWidgets": {
+    "resin": false,
+    "domains": false,
+    "tasks": false,
+    "realm": true
+  },
+  "resin": {
+    "value": 21.753616666666638,
+    "time": 1663246549001
+  },
+  "resinEstimateMode": "value",
+  "resinNotifyMark": 150,
+  "realmEnergy": 20000,
+  "realmRank": 10,
+  "realmCurrency": {
+    "value": 0,
+    "time": 1639132549002
+  },
+  "resinCalcButtons": [
+    60,
+    -40,
+    -30,
+    -20,
+    -10
+  ],
+  "characters": [],
+  "charactersWeekly": [],
+  "charactersGem": [],
+  "charactersNormalBoss": [],
+  "weapons": [],
+  "artifacts": [],
+  "domainFilter": "efficiency",
+  "domainFilterType": "all",
+  "domainFilterRegion": "all",
+  "itemNotes": {
+    "Albedo": ""
+  },
+  "itemHighlights": [],
+  "tasks": [
+    {
+      "id": "eplza3",
+      "name": "1",
+      "icon": "Red Circle",
+      "location": {
+        "lat": -25.085598897064763,
+        "lng": 55.77758789062501
+      },
+      "dueTime": 1663272000000,
+      "refreshTime": "reset",
+      "visible": true,
+      "notify": false,
+      "description": "",
+      "highlight": false
+    },
+    {
+      "id": "8akzqh",
+      "name": "1",
+      "icon": "Red Circle",
+      "location": {
+        "lat": -25.425540341671436,
+        "lng": 56.39405688920222
+      },
+      "dueTime": 1627468682013,
+      "refreshTime": "reset",
+      "visible": false,
+      "notify": false,
+      "description": ""
+    },
+    {
+      "id": "ezm5pd",
+      "name": "1",
+      "icon": "Red Circle",
+      "location": {
+        "lat": -26.391869671769022,
+        "lng": 58.28247070312501
+      },
+      "dueTime": 1663272000000,
+      "refreshTime": "reset",
+      "visible": true,
+      "notify": false,
+      "description": ""
+    },
+    {
+      "id": "39wwcu",
+      "name": "1",
+      "icon": "Red Circle",
+      "location": {
+        "lat": -26.363463986113757,
+        "lng": 57.98752710791831
+      },
+      "dueTime": 1663317489003,
+      "refreshTime": 72000000,
+      "visible": true,
+      "notify": false,
+      "description": "",
+      "highlight": true
+    },
+    {
+      "id": "m5sag1",
+      "name": "1",
+      "icon": "Fowl",
+      "location": {
+        "lat": -26.902476886279807,
+        "lng": 60.40283203125001
+      },
+      "dueTime": 1620072000000,
+      "refreshTime": "reset",
+      "visible": false,
+      "notify": false
+    },
+    {
+      "id": "jx9g9w",
+      "name": "1",
+      "icon": "Fowl",
+      "location": {
+        "lat": -56.866991189329184,
+        "lng": 41.15478515625001
+      },
+      "dueTime": 1620072000000,
+      "refreshTime": "reset",
+      "visible": false,
+      "notify": false
+    },
+    {
+      "id": "4aau9h",
+      "name": "1",
+      "icon": "Fowl",
+      "location": {
+        "lat": -56.62602060837193,
+        "lng": 41.03393554687501
+      },
+      "dueTime": 1620072000000,
+      "refreshTime": "reset",
+      "visible": false,
+      "notify": false
+    },
+    {
+      "id": "7ujflg",
+      "name": "1",
+      "icon": "Raw Meat",
+      "location": {
+        "lat": -25.878994400196202,
+        "lng": 58.12866210937501
+      },
+      "dueTime": 1652817600000,
+      "refreshTime": "reset",
+      "visible": false,
+      "notify": false
+    },
+    {
+      "id": "2l0oua",
+      "name": "1",
+      "icon": "Blacksmith",
+      "location": {
+        "lat": -26.657277674217585,
+        "lng": 58.56811523437501
+      },
+      "dueTime": 1663272000000,
+      "refreshTime": "reset",
+      "visible": true,
+      "notify": false,
+      "highlight": true
+    },
+    {
+      "id": "j9uqqq",
+      "name": "1",
+      "icon": "Parametric Transformer",
+      "location": {
+        "lat": -24.97702958913438,
+        "lng": 56.15970838991718
+      },
+      "dueTime": 1663143999622,
+      "refreshTime": 597600000,
+      "visible": false,
+      "notify": true,
+      "highlight": true
+    },
+    {
+      "id": "4f18e6",
+      "name": "1",
+      "icon": "Blacksmith",
+      "location": {
+        "lat": -26.814266197561473,
+        "lng": 58.42529296875001
+      },
+      "dueTime": 1635624000000,
+      "refreshTime": "reset",
+      "visible": false,
+      "notify": false
+    },
+    {
+      "id": "pvry2m",
+      "name": "1",
+      "icon": "Portable Waypoint",
+      "location": {
+        "lat": -50.78234058372571,
+        "lng": 52.220184331102125
+      },
+      "dueTime": 1663356698003,
+      "refreshTime": 518400000,
+      "visible": true,
+      "notify": false,
+      "highlight": true
+    },
+    {
+      "id": "9c7rq6",
+      "name": "1",
+      "icon": "Red Circle",
+      "location": {
+        "lat": -25.329950170839762,
+        "lng": 56.03774065452064
+      },
+      "dueTime": 1663959783001,
+      "refreshTime": 1209600000,
+      "visible": true,
+      "notify": false,
+      "description": "",
+      "highlight": true
+    },
+    {
+      "id": "ktexib",
+      "name": "1",
+      "icon": "General Goods",
+      "location": {
+        "lat": -30.012030680358613,
+        "lng": 57.89245605468751
+      },
+      "dueTime": 1629910624015,
+      "refreshTime": "reset",
+      "visible": false,
+      "notify": false
+    },
+    {
+      "id": "t6jqze",
+      "name": "1",
+      "icon": "Red Circle",
+      "location": {
+        "lat": -25.195000424307494,
+        "lng": 56.36535644531251
+      },
+      "dueTime": 1651348800000,
+      "refreshTime": "reset",
+      "visible": false,
+      "notify": false,
+      "description": ""
+    },
+    {
+      "id": "89fykr",
+      "name": "1",
+      "icon": "Crystal Core",
+      "location": {
+        "lat": -25.423431426334233,
+        "lng": 55.73913574218751
+      },
+      "dueTime": 1629910625015,
+      "refreshTime": "reset",
+      "visible": false,
+      "notify": false
+    },
+    {
+      "id": "rxour3",
+      "name": "1",
+      "icon": "Red Circle",
+      "location": {
+        "lat": -25.631621577258482,
+        "lng": 56.13464355468751
+      },
+      "dueTime": 1663272000000,
+      "refreshTime": "reset",
+      "visible": true,
+      "notify": false,
+      "description": "",
+      "highlight": false
+    },
+    {
+      "id": "muhhka",
+      "name": "1",
+      "icon": "Red Circle",
+      "location": {
+        "lat": -24.467150664738988,
+        "lng": 54.38781738281251
+      },
+      "dueTime": 1663531200000,
+      "refreshTime": "monday",
+      "visible": true,
+      "notify": false,
+      "description": "",
+      "highlight": true
+    },
+    {
+      "id": "7dx1g4",
+      "name": "1",
+      "icon": "Cyan Circle",
+      "location": {
+        "lat": -26.0074241568022,
+        "lng": 58.86474609375001
+      },
+      "dueTime": 1658088000000,
+      "refreshTime": "reset",
+      "visible": true,
+      "notify": false
+    },
+    {
+      "id": "0gh73x",
+      "name": "1",
+      "icon": "Parametric Transformer",
+      "location": {
+        "lat": -24.666986385216248,
+        "lng": 55.92041015625001
+      },
+      "dueTime": 1634218459001,
+      "refreshTime": 597600000,
+      "visible": false,
+      "notify": true
+    },
+    {
+      "id": "n5alm6",
+      "name": "1",
+      "icon": "Red Circle",
+      "location": {
+        "lat": -24.896402266558713,
+        "lng": 56.48071289062501
+      },
+      "dueTime": 1660939200000,
+      "refreshTime": "reset",
+      "visible": false,
+      "notify": false,
+      "description": "",
+      "highlight": true
+    },
+    {
+      "id": "x6p4uf",
+      "name": "1",
+      "icon": "Transient Resin",
+      "location": {
+        "lat": -25.224820176765036,
+        "lng": 55.4150390625
+      },
+      "dueTime": 1663444800000,
+      "refreshTime": "sunday",
+      "visible": true,
+      "notify": false,
+      "description": ""
+    },
+    {
+      "id": "yqjrvv",
+      "name": "1",
+      "icon": "Red Circle",
+      "location": {
+        "lat": -22.978623970384902,
+        "lng": 54.96459960937501
+      },
+      "dueTime": 1660420800000,
+      "refreshTime": "sunday",
+      "visible": false,
+      "notify": false,
+      "description": ""
+    },
+    {
+      "id": "8o6oev",
+      "name": "1",
+      "icon": "Red Circle",
+      "location": {
+        "lat": -22.34062115680381,
+        "lng": 56.460509885516274
+      },
+      "dueTime": 1663531200000,
+      "refreshTime": "monday",
+      "visible": true,
+      "notify": false,
+      "description": "",
+      "highlight": false
+    },
+    {
+      "id": "ug30cr",
+      "name": "1",
+      "icon": "Blue Circle",
+      "location": {
+        "lat": -34.016241889667015,
+        "lng": 41.22070312500001
+      },
+      "dueTime": 1631649600000,
+      "refreshTime": "reset",
+      "visible": false,
+      "notify": false,
+      "description": ""
+    },
+    {
+      "id": "x49mwk",
+      "name": "1",
+      "icon": "Red Circle",
+      "location": {
+        "lat": -22.49536154612656,
+        "lng": 57.975313439001994
+      },
+      "dueTime": 1663322766002,
+      "refreshTime": 252000000,
+      "visible": true,
+      "notify": false,
+      "description": "",
+      "highlight": true
+    },
+    {
+      "id": "qq3vou",
+      "name": "1",
+      "icon": "Green Circle",
+      "location": {
+        "lat": -22.29726199553015,
+        "lng": 59.168553665216095
+      },
+      "dueTime": 1663249110005,
+      "refreshTime": 259200000,
+      "visible": true,
+      "notify": false,
+      "description": "",
+      "highlight": true
+    },
+    {
+      "id": "7ggd1y",
+      "name": "0,0",
+      "icon": "Red Circle",
+      "location": {
+        "lat": -31.924192605327708,
+        "lng": 58.41430664062501
+      },
+      "dueTime": 1663260892007,
+      "refreshTime": 259200000,
+      "visible": false,
+      "notify": false,
+      "description": ""
+    }
+  ],
+  "taskQuery": "",
+  "taskListCompact": true,
+  "taskListShowHidden": false,
+  "taskListShowDone": false,
+  "customizeQuery": "",
+  "iconQuery": "",
+  "iconListScroll": 2001.5,
+  "mapState": {
+    "lat": -28.14950321154457,
+    "lng": 58.40332031250001,
+    "zoom": 4
+  },
+  "mapTaskDefaultZoom": 4,
+  "mapCreateTask": {
+    "id": "7ggd1y",
+    "name": "0,0",
+    "icon": "Red Circle",
+    "location": {
+      "lat": -31.924192605327708,
+      "lng": 58.41430664062501
+    },
+    "dueTime": 0,
+    "refreshTime": 259200000,
+    "visible": false,
+    "notify": false,
+    "description": ""
+  },
+  "mapFocusedTask": false,
+  "mapTaskList": true,
+  "stats": [
+    {
+      "id": "2022-08-18",
+      "time": 1660752000000,
+      "resinsSpent": 160,
+      "tasksDone": 5
+    },
+    {
+      "id": "2022-08-19",
+      "time": 1660838400000,
+      "resinsSpent": 200,
+      "tasksDone": 6
+    },
+    {
+      "id": "2022-08-20",
+      "time": 1660924800000,
+      "resinsSpent": 160,
+      "tasksDone": 4
+    },
+    {
+      "id": "2022-08-21",
+      "time": 1661011200000,
+      "resinsSpent": 200,
+      "tasksDone": 5
+    },
+    {
+      "id": "2022-08-22",
+      "time": 1661097600000,
+      "resinsSpent": 170,
+      "tasksDone": 6
+    },
+    {
+      "id": "2022-08-23",
+      "time": 1661184000000,
+      "resinsSpent": 200,
+      "tasksDone": 5
+    },
+    {
+      "id": "2022-08-24",
+      "time": 1661270400000,
+      "resinsSpent": 240,
+      "tasksDone": 5
+    },
+    {
+      "id": "2022-08-25",
+      "time": 1661356800000,
+      "resinsSpent": 240,
+      "tasksDone": 6
+    },
+    {
+      "id": "2022-08-26",
+      "time": 1661443200000,
+      "resinsSpent": 120,
+      "tasksDone": 6
+    },
+    {
+      "id": "2022-08-27",
+      "time": 1661529600000,
+      "resinsSpent": 160,
+      "tasksDone": 5
+    },
+    {
+      "id": "2022-08-28",
+      "time": 1661616000000,
+      "resinsSpent": 280,
+      "tasksDone": 6
+    },
+    {
+      "id": "2022-08-29",
+      "time": 1661702400000,
+      "resinsSpent": 210,
+      "tasksDone": 8
+    },
+    {
+      "id": "2022-08-30",
+      "time": 1661788800000,
+      "resinsSpent": 160,
+      "tasksDone": 5
+    },
+    {
+      "id": "2022-08-31",
+      "time": 1661875200000,
+      "resinsSpent": 200,
+      "tasksDone": 6
+    },
+    {
+      "id": "2022-09-01",
+      "time": 1661961600000,
+      "resinsSpent": 160,
+      "tasksDone": 6
+    },
+    {
+      "id": "2022-09-02",
+      "time": 1662048000000,
+      "resinsSpent": 240,
+      "tasksDone": 5
+    },
+    {
+      "id": "2022-09-03",
+      "time": 1662134400000,
+      "resinsSpent": 120,
+      "tasksDone": 5
+    },
+    {
+      "id": "2022-09-04",
+      "time": 1662220800000,
+      "resinsSpent": 187,
+      "tasksDone": 9
+    },
+    {
+      "id": "2022-09-05",
+      "time": 1662307200000,
+      "resinsSpent": 210,
+      "tasksDone": 7
+    },
+    {
+      "id": "2022-09-06",
+      "time": 1662393600000,
+      "resinsSpent": 160,
+      "tasksDone": 5
+    },
+    {
+      "id": "2022-09-07",
+      "time": 1662480000000,
+      "resinsSpent": 200,
+      "tasksDone": 7
+    },
+    {
+      "id": "2022-09-08",
+      "time": 1662566400000,
+      "resinsSpent": 160,
+      "tasksDone": 6
+    },
+    {
+      "id": "2022-09-09",
+      "time": 1662652800000,
+      "resinsSpent": 168,
+      "tasksDone": 6
+    },
+    {
+      "id": "2022-09-10",
+      "time": 1662739200000,
+      "resinsSpent": 160,
+      "tasksDone": 7
+    },
+    {
+      "id": "2022-09-11",
+      "time": 1662825600000,
+      "resinsSpent": 200,
+      "tasksDone": 6
+    },
+    {
+      "id": "2022-09-12",
+      "time": 1662912000000,
+      "resinsSpent": 170,
+      "tasksDone": 8
+    },
+    {
+      "id": "2022-09-13",
+      "time": 1662998400000,
+      "resinsSpent": 160,
+      "tasksDone": 6
+    },
+    {
+      "id": "2022-09-14",
+      "time": 1663084800000,
+      "resinsSpent": 200,
+      "tasksDone": 5
+    },
+    {
+      "id": "2022-09-15",
+      "time": 1663171200000,
+      "resinsSpent": 120,
+      "tasksDone": 5
+    }
+  ],
+  "statRetention": 28,
+  "domainFilters": []
+}

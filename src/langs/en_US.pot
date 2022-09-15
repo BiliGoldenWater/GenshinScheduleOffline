@@ -191,7 +191,7 @@ msgctxt "components.Customize.SettingsList.ResinNotifyMarkSlider.b9f3be"
 msgid "Send resin notification at"
 msgstr ""
 
-#: src/components/Customize/SettingsList/TaskDefaultZoomSlider.tsx:28
+#: src/components/Customize/SettingsList/TaskDefaultZoomSlider.tsx:29
 msgctxt "components.Customize.SettingsList.TaskDefaultZoomSlider.9c6d23"
 msgid "Zoom on task focus"
 msgstr ""
@@ -2976,249 +2976,19 @@ msgctxt "db.icons.fe8ed6"
 msgid "Crab"
 msgstr ""
 
-#: src/db/map.ts:73
-msgctxt "db.map.03b6ce"
-msgid "Cider Lake"
+#: src/db/map.ts:28
+msgctxt "db.map.014a3d"
+msgid "Starfell Valley"
 msgstr ""
 
-#: src/db/map.ts:13
-msgctxt "db.map.0427ba"
-msgid "Wolvendom"
-msgstr ""
-
-#: src/db/map.ts:61
-msgctxt "db.map.082833"
-msgid "Cape Oath"
-msgstr ""
-
-#: src/db/map.ts:173
-msgctxt "db.map.135688"
-msgid "Mt. Aocang"
-msgstr ""
-
-#: src/db/map.ts:197
-msgctxt "db.map.145456"
-msgid "Starglow Cavern"
-msgstr ""
-
-#: src/db/map.ts:193
-msgctxt "db.map.15da53"
-msgid "Skyfrost Nail"
-msgstr ""
-
-#: src/db/map.ts:37
-msgctxt "db.map.16620e"
-msgid "Starsnatch Cliff"
-msgstr ""
-
-#: src/db/map.ts:89
-msgctxt "db.map.1b9ba5"
-msgid "Sal Terrae"
-msgstr ""
-
-#: src/db/map.ts:177
-msgctxt "db.map.1f32ba"
-msgid "Snow-Covered Path"
-msgstr ""
-
-#: src/db/map.ts:121
-msgctxt "db.map.222770"
-msgid "Mt. Tianheng"
-msgstr ""
-
-#: src/db/map.ts:153
-msgctxt "db.map.2674f8"
-msgid "Cuijue Slope"
-msgstr ""
-
-#: src/db/map.ts:157
-msgctxt "db.map.27ea30"
-msgid "Jueyun Karst"
-msgstr ""
-
-#: src/db/map.ts:185
-msgctxt "db.map.3af338"
-msgid "Entombed City - Outskirts"
-msgstr ""
-
-#: src/db/map.ts:21
+#: src/db/map.ts:35
 msgctxt "db.map.430ff6"
 msgid "Springvale"
 msgstr ""
 
-#: src/db/map.ts:5
-msgctxt "db.map.48d455"
-msgid "Stormterror's Lair"
-msgstr ""
-
-#: src/db/map.ts:97
-msgctxt "db.map.4a30b1"
-msgid "Wangshu Inn"
-msgstr ""
-
-#: src/db/map.ts:117
-msgctxt "db.map.4b454f"
-msgid "Luhua Pool"
-msgstr ""
-
-#: src/db/map.ts:133
-msgctxt "db.map.510a40"
-msgid "Lingju Pass"
-msgstr ""
-
-#: src/db/map.ts:113
-msgctxt "db.map.540286"
-msgid "Guyun Stone Forest"
-msgstr ""
-
-#: src/db/map.ts:145
-msgctxt "db.map.576457"
-msgid "Tianqiu Valley"
-msgstr ""
-
-#: src/db/map.ts:161
-msgctxt "db.map.587277"
-msgid "Qingyun Peak"
-msgstr ""
-
-#: src/db/map.ts:69
+#: src/db/map.ts:21
 msgctxt "db.map.5a37ea"
 msgid "Mondstadt"
-msgstr ""
-
-#: src/db/map.ts:33
-msgctxt "db.map.67056c"
-msgid "Thousand Winds Temple"
-msgstr ""
-
-#: src/db/map.ts:141
-msgctxt "db.map.68f8de"
-msgid "Chasm"
-msgstr ""
-
-#: src/db/map.ts:29
-msgctxt "db.map.6da2ab"
-msgid "Falcon Coast"
-msgstr ""
-
-#: src/db/map.ts:41
-msgctxt "db.map.6dcc87"
-msgid "Whispering Woods"
-msgstr ""
-
-#: src/db/map.ts:101
-msgctxt "db.map.74fcf0"
-msgid "Mingyun Village"
-msgstr ""
-
-#: src/db/map.ts:109
-msgctxt "db.map.7febf1"
-msgid "Guili Plains"
-msgstr ""
-
-#: src/db/map.ts:45
-msgctxt "db.map.8566ec"
-msgid "Starfell Lake"
-msgstr ""
-
-#: src/db/map.ts:81
-msgctxt "db.map.8cfe9e"
-msgid "Qingce Village"
-msgstr ""
-
-#: src/db/map.ts:93
-msgctxt "db.map.8e2190"
-msgid "Dihua Marsh"
-msgstr ""
-
-#: src/db/map.ts:9
-msgctxt "db.map.9aa982"
-msgid "Brightcrown Canyon"
-msgstr ""
-
-#: src/db/map.ts:165
-msgctxt "db.map.a61d69"
-msgid "Huaguang Stone Forest"
-msgstr ""
-
-#: src/db/map.ts:125
-msgctxt "db.map.aaa08a"
-msgid "Liyue Harbor"
-msgstr ""
-
-#: src/db/map.ts:105
-msgctxt "db.map.ab7b85"
-msgid "Yaoguang Shoal"
-msgstr ""
-
-#: src/db/map.ts:129
-msgctxt "db.map.ad2439"
-msgid "Dunyu Ruins"
-msgstr ""
-
-#: src/db/map.ts:77
-msgctxt "db.map.afc0c3"
-msgid "Wuwang Hill"
-msgstr ""
-
-#: src/db/map.ts:189
-msgctxt "db.map.b724b2"
-msgid "Entombed City - Ancient Palace"
-msgstr ""
-
-#: src/db/map.ts:57
-msgctxt "db.map.bf26ec"
-msgid "Dadaupa Gorge"
-msgstr ""
-
-#: src/db/map.ts:65
-msgctxt "db.map.c333f8"
-msgid "Musk Reef"
-msgstr ""
-
-#: src/db/map.ts:49
-msgctxt "db.map.c3ef8e"
-msgid "Stormbearer Mountains"
-msgstr ""
-
-#: src/db/map.ts:149
-msgctxt "db.map.c42db6"
-msgid "Nantianmen"
-msgstr ""
-
-#: src/db/map.ts:53
-msgctxt "db.map.cb3dbb"
-msgid "Stormbearer Point"
-msgstr ""
-
-#: src/db/map.ts:169
-msgctxt "db.map.e8f2c9"
-msgid "Mt. Hulao"
-msgstr ""
-
-#: src/db/map.ts:25
-msgctxt "db.map.eabd3a"
-msgid "Windrise"
-msgstr ""
-
-#: src/db/map.ts:181
-msgctxt "db.map.ee39fa"
-msgid "Wyrmrest Valley"
-msgstr ""
-
-#: src/db/map.ts:85
-msgctxt "db.map.f7d6f3"
-msgid "Stone Gate"
-msgstr ""
-
-#: src/db/map.ts:17
-msgctxt "db.map.f978c6"
-msgid "Dawn Winery"
-msgstr ""
-
-#: src/db/map.ts:137
-msgctxt "db.map.fbe305"
-msgid "Qingxu Pool"
 msgstr ""
 
 #: src/db/regions.ts:179

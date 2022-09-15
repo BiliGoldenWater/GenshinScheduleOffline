@@ -16,11 +16,7 @@ import { ServerResetHour, useServerTime } from "./time";
 import { DateTime } from "luxon";
 import { Language } from "../langs";
 import { CharacterBackgrounds } from "../components/Background";
-
-type MapLocation = { lat: number; lng: number };
-
-export const MapZoomMin = 2;
-export const MapZoomMax = 6;
+import { Position, posToLatLng } from "../db/map";
 
 export type Config = {
   language: Language | "default";
@@ -70,7 +66,7 @@ export type Config = {
   customizeQuery: string;
   iconQuery: string;
   iconListScroll: number;
-  mapState: MapLocation & { zoom: number };
+  mapState: { lat: number; lng: number } & { zoom: number };
   mapTaskDefaultZoom: number;
   mapCreateTask: Task;
   mapFocusedTask: string | false;
@@ -96,7 +92,7 @@ export type Task = {
   name: string;
   description?: string;
   visible: boolean;
-  location: MapLocation;
+  position: Position;
   dueTime: number;
   refreshTime: TaskRefreshTime;
   highlight?: boolean;
@@ -109,9 +105,9 @@ export type StatFrame = {
   tasksDone: number;
 };
 
-const defaultMapCenter = {
-  lat: -24.83,
-  lng: 54.73,
+const defaultMapCenter: Position = {
+  x: 0,
+  y: 0,
 };
 
 export const DefaultConfig: Config = {
@@ -155,7 +151,7 @@ export const DefaultConfig: Config = {
   iconQuery: "",
   iconListScroll: 0,
   mapState: {
-    ...defaultMapCenter,
+    ...posToLatLng(defaultMapCenter),
     zoom: 5,
   },
   mapTaskDefaultZoom: 5.6,
@@ -163,7 +159,7 @@ export const DefaultConfig: Config = {
     id: "temp",
     name: "Iron Chunk",
     icon: "Iron Chunk",
-    location: defaultMapCenter,
+    position: defaultMapCenter,
     dueTime: 0,
     refreshTime: 86400000,
     visible: false,

@@ -11,9 +11,10 @@ import {
   StatNumber,
   Tooltip,
 } from "@chakra-ui/react";
-import { MapZoomMax, MapZoomMin, useConfig } from "../../../utils/config";
+import { useConfig } from "../../../utils/config";
 import { FormattedMessage } from "react-intl";
 import { ZoomIn } from "react-feather";
+import { MapZoomMax, MapZoomMin } from "../../../db/map";
 
 const TaskDefaultZoomSlider = () => {
   const [hint, setHint] = useState(false);

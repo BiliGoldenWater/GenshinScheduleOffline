@@ -1,5 +1,5 @@
 import React, { CSSProperties, memo, ReactNode } from "react";
-import { MapZoomMax, MapZoomMin, useConfig } from "../../utils/config";
+import { useConfig } from "../../utils/config";
 import TileLayer from "./TileLayer";
 import TaskLayer from "./TaskLayer";
 import TaskCreateLayer from "./TaskCreateLayer";
@@ -7,8 +7,9 @@ import PositionSync from "./PositionSync";
 import { MapContainer } from "react-leaflet";
 import RegionLabelLayer from "./RegionLabelLayer";
 import { Helmet } from "react-helmet";
-import { CRS } from "leaflet";
 import "leaflet/dist/leaflet.css";
+import { CRS } from "leaflet";
+import { MapBounds, MapZoomMax, MapZoomMin } from "../../db/map";
 
 const Map = ({
   children,
@@ -17,8 +18,9 @@ const Map = ({
   children?: ReactNode;
   style?: CSSProperties;
 }) => {
-  const [{ lat, lng, zoom }] = useConfig("mapState");
+  let [{ lat, lng, zoom }] = useConfig("mapState");
 
+  // let markerLatLng = posToLatLng({ x: 0, y: 0 });
   // adapted from https://github.com/GenshinMap/genshinmap.github.io/blob/master/js/index.js
   return (
     <>
@@ -27,13 +29,13 @@ const Map = ({
         className="task-map"
         center={[lat, lng]}
         zoomDelta={0}
-        zoomSnap={0.1}
+        zoomSnap={0.01}
         minZoom={MapZoomMin}
         maxZoom={MapZoomMax}
         zoom={zoom}
         maxBounds={[
-          [6, 5],
-          [-195, 250],
+          [MapBounds[1] * -1, MapBounds[0]],
+          [MapBounds[3] * -1, MapBounds[2]],
         ]}
         attributionControl={false}
         zoomControl={false}
@@ -41,11 +43,28 @@ const Map = ({
         crs={CRS.Simple}
       >
         <TileLayer />
-        <RegionLabelLayer />
+        <RegionLabelLayer zoom={zoom} />
         <TaskLayer />
         <TaskCreateLayer />
         <PositionSync />
-        {/*<Marker position={[lat, lng]}></Marker>*/}
+        {/*debug marker*/}
+        {/*<Marker position={deLatLng(markerLatLng)}>*/}
+        {/*  <Popup>*/}
+        {/*    <div*/}
+        {/*      style={{*/}
+        {/*        backgroundColor: "white",*/}
+        {/*        color: "black",*/}
+        {/*        fontSize: " 2em",*/}
+        {/*      }}*/}
+        {/*    >*/}
+        {/*      {`x: ${latLngToPos(markerLatLng).x}`}*/}
+        {/*      <br />*/}
+        {/*      {`y: ${latLngToPos(markerLatLng).y}`}*/}
+        {/*      <br />*/}
+        {/*      {`zoom: ${zoom}`}*/}
+        {/*    </div>*/}
+        {/*  </Popup>*/}
+        {/*</Marker>*/}
 
         {children}
       </MapContainer>

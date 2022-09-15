@@ -9,7 +9,7 @@ import React, {
   useState,
 } from "react";
 import { Task, useConfig } from "../../../utils/config";
-import { Icon } from "leaflet";
+import { CRS, Icon } from "leaflet";
 import CardPopup from "../CardPopup";
 import MarkerWrapper from "./MarkerWrapper";
 import BackButton from "./BackButton";
@@ -18,6 +18,7 @@ import IconPage from "./IconPage";
 import { getAssetByName } from "../../../assets";
 import { HStack } from "@chakra-ui/react";
 import TransparentPixel from "../../../assets/TransparentPixel.png";
+import { applyPosOffset, posToLatLng, scalePosBy } from "../../../db/map";
 
 export type PopupPage = "info" | "icon";
 export const PopupPages: PopupPage[] = ["info", "icon"];
@@ -63,11 +64,23 @@ const TaskMarker = ({
 
   const [page, setPage] = useState<PopupPage>(PopupPages[0]);
 
+  // region backward compatibility
+  // @ts-ignore
+  if (task.location != null) {
+    // @ts-ignore
+    let p = CRS.EPSG3395.latLngToPoint(task.location, 0);
+    let pos = applyPosOffset(scalePosBy({ x: p.x, y: p.y }, 1.5));
+    task.position = { x: pos.x - 388.61, y: pos.y - 271.8 };
+    // // @ts-ignore
+    // task.location = undefined;
+  }
+  // endregion
+
   return (
     <MarkerWrapper
       task={task}
       markerRef={markerRef}
-      position={task.location}
+      position={posToLatLng(task.position)}
       icon={icon}
     >
       <CardPopup
