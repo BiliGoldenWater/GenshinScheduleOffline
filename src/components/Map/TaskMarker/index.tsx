@@ -71,8 +71,9 @@ const TaskMarker = ({
     let p = CRS.EPSG3395.latLngToPoint(task.location, 0);
     let pos = applyPosOffset(scalePosBy({ x: p.x, y: p.y }, 1.5));
     task.position = { x: pos.x - 388.61, y: pos.y - 271.8 };
-    // // @ts-ignore
-    // task.location = undefined;
+    // need disable for debug
+    // @ts-ignore
+    task.location = undefined;
   }
   // endregion
 
