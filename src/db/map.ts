@@ -1,16 +1,18 @@
 import { registerMessage } from "../utils";
-import { Position, posToLatLng } from "../utils/mapPositionUtils";
+import { Position } from "../utils/mapPositionUtils";
 
 export const MapZoomMin = 2.5;
 export const MapZoomMax = 6;
 export const MapBounds = [24, 8, 232, 184];
 
-type Markers = {
+export type TMarker = {
   name: string;
   location: Position;
-}[];
+};
 
-const CountryMarkers: Markers = [
+export type Markers = TMarker[];
+
+export const CountryMarkers: Markers = [
   {
     name: registerMessage({ defaultMessage: "Mondstadt" }),
     location: { x: 2.07, y: -1.25 },
@@ -29,39 +31,16 @@ const CountryMarkers: Markers = [
   },
 ];
 
-const RegionMarkers: Markers = [
+export const RegionMarkers: Markers = [
   {
     name: registerMessage({ defaultMessage: "Starfell Valley" }),
-    location: { x: 6.6, y: -10.7 },
+    location: { x: 6.46, y: -10.67 },
   },
 ];
 
-const PlaceMarkers: Markers = [
+export const PlaceMarkers: Markers = [
   {
     name: registerMessage({ defaultMessage: "Springvale" }),
     location: { x: -1.1, y: -2 },
   },
 ];
-
-function translation(markers: Markers): unknown {
-  return markers
-    .map(({ name, location }) => {
-      let { lat, lng } = posToLatLng(location);
-      return {
-        name,
-        location: [lat, lng],
-      };
-    })
-    .map(({ name: id, location: coordinates }) => ({
-      type: "Feature",
-      id,
-      geometry: {
-        type: "Point",
-        coordinates,
-      },
-    }));
-}
-
-export const GeoCountryMarkers = translation(CountryMarkers);
-export const GeoRegionMarkers = translation(RegionMarkers);
-export const GeoPlaceMarkers = translation(PlaceMarkers);

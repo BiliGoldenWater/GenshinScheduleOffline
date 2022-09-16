@@ -1,16 +1,17 @@
-import React, { memo, ReactNode, useEffect, useState } from "react";
-import { GeoJSON } from "react-leaflet";
-import { DivIcon, LatLng, LatLngTuple, Layer, Marker } from "leaflet";
-import { renderToStaticMarkup } from "react-dom/server";
-import { chakra } from "@chakra-ui/react";
-import { Config, useConfig } from "../../utils/config";
-import { useIntl } from "react-intl";
+import React, { memo, ReactNode } from "react";
+import { Marker } from "react-leaflet";
+import { DivIcon } from "leaflet";
+import { renderToString } from "react-dom/server";
+import { IntlShape, useIntl } from "react-intl";
 import {
-  GeoCountryMarkers,
-  GeoPlaceMarkers,
-  GeoRegionMarkers,
+  CountryMarkers,
   MapZoomMax,
+  Markers,
+  PlaceMarkers,
+  RegionMarkers,
+  TMarker,
 } from "../../db/map";
+import { Position, posToLatLng } from "../../utils/mapPositionUtils";
 
 enum Level {
   Country = 3.8,
@@ -19,71 +20,93 @@ enum Level {
 }
 
 const RegionLabelLayer = ({ zoom }: { zoom: number }) => {
-  const { formatMessage: formatMessageId } = useIntl();
-  const [renderId, setRenderId] = useState(0);
-  const [state] = useConfig("mapState");
+  const intlShape = useIntl();
 
-  useEffect(() => setRenderId((i) => i + 1), [state]);
-
-  let markers;
+  let markers: Markers;
   let level: Level;
   if (zoom < Level.Country) {
-    markers = GeoCountryMarkers;
+    markers = CountryMarkers;
     level = Level.Country;
   } else if (zoom < Level.Region) {
-    markers = GeoRegionMarkers;
+    markers = RegionMarkers;
     level = Level.Region;
   } else {
-    markers = GeoPlaceMarkers;
+    markers = PlaceMarkers;
     level = Level.Place;
   }
 
-  return (
-    <GeoJSON
-      key={renderId}
-      data={markers as any}
-      pointToLayer={({ id }, latlng) =>
-        pointToLayer(
-          state,
-          formatMessageId({ id: id?.toString() }),
-          latlng,
-          level
-        )
-      }
+  return <>{markers.map((it) => buildMarker(it, level, zoom, intlShape))}</>;
+};
+
+function buildMarker(
+  marker: TMarker,
+  level: Level,
+  zoom: number,
+  { formatMessage: formatMessageId }: IntlShape
+) {
+  // region measure
+  let root = document.getElementById("root")!;
+
+  let label = renderToString(
+    <RegionLabel
+      zoom={zoom}
+      name={marker.name}
+      level={level}
+      transform={{ x: 0, y: 0 }}
     />
   );
-};
 
-const pointToLayer = (
-  map: Config["mapState"],
-  name: string,
-  latlng: LatLng,
-  level: Level
-): Layer => {
-  const markerLatlng: LatLngTuple = [latlng.lng, latlng.lat]; // careful!! latlng swapped
+  let measureContainer = document.createElement("div");
+  measureContainer.innerHTML = label;
 
-  return new Marker(markerLatlng, {
-    interactive: false,
-    icon: new DivIcon({
-      html: renderToStaticMarkup(
-        <RegionLabel map={map} name={name} level={level} />
-      ),
-      className: "region-label-icon",
-    }),
-    zIndexOffset: -900,
+  let labelElement = measureContainer.firstElementChild! as HTMLDivElement;
+  labelElement.style.display = "inline-block";
+
+  root.appendChild(measureContainer);
+  let rect = labelElement!.getBoundingClientRect();
+  root.removeChild(measureContainer);
+  // endregion
+
+  label = renderToString(
+    <RegionLabel
+      zoom={zoom}
+      name={formatMessageId({ id: marker.name })}
+      level={level}
+      transform={{
+        x: rect.width * -0.5,
+        y: rect.height * -0.5,
+      }}
+    />
+  );
+
+  let icon = new DivIcon({
+    html: label,
+    className: "region-label-icon",
   });
-};
+
+  return (
+    <Marker
+      key={`${JSON.stringify(marker.location)}`}
+      position={posToLatLng(marker.location)}
+      zIndexOffset={-900}
+      interactive={false}
+      icon={icon}
+    />
+  );
+}
 
 const RegionLabel = ({
-  map,
+  zoom,
   name,
   level,
+  transform,
 }: {
-  map: Config["mapState"];
+  zoom: number;
   name: ReactNode;
   level: Level;
+  transform: Position;
 }) => {
-  let fontSize;
+  let fontSize = 1;
   switch (level) {
     case Level.Country: {
       fontSize = 4;
@@ -98,22 +121,20 @@ const RegionLabel = ({
       break;
     }
   }
+  fontSize *= zoom / level;
   return (
-    <chakra.div
+    <div
       style={{
         fontSize: `${fontSize}rem`,
-        transform: `scale(${map.zoom / level})`,
+        transform: `translate(${transform.x}px, ${transform.y}px)`,
         whiteSpace: "nowrap",
         wordBreak: "keep-all",
         color: "white",
-        position: "relative",
-        top: "-290%",
-        left: "-50%",
         fontFamily: "Genshin",
       }}
     >
       {name}
-    </chakra.div>
+    </div>
   );
 };
 
