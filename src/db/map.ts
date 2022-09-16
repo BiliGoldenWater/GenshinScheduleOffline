@@ -42,7 +42,7 @@ export const RegionMarkers: Markers = [
     location: { x: 7, y: 3.77 },
   },
   {
-    name: registerMessage({ defaultMessage: "Brightcrown Mountains" }),
+    name: registerMessage({ defaultMessage: "Brightcrown\nMountains" }),
     location: { x: -9.42, y: -12.91 },
   },
   {
