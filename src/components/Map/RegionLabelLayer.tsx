@@ -86,7 +86,7 @@ function buildMarker(
 
   return (
     <Marker
-      key={`${JSON.stringify(marker.location)}`}
+      key={`${marker.location.x}${marker.location.y}${marker.name}`}
       position={posToLatLng(marker.location)}
       zIndexOffset={-900}
       interactive={false}
