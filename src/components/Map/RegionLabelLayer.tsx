@@ -1,4 +1,4 @@
-import React, { memo, ReactNode } from "react";
+import React, { memo } from "react";
 import { Marker } from "react-leaflet";
 import { CRS, DivIcon } from "leaflet";
 import { renderToString } from "react-dom/server";
@@ -102,7 +102,7 @@ const RegionLabel = ({
   transform,
 }: {
   zoom: number;
-  name: ReactNode;
+  name: string;
   level: Level;
   transform: Position;
 }) => {
@@ -131,9 +131,15 @@ const RegionLabel = ({
         wordBreak: "keep-all",
         color: "white",
         fontFamily: "Genshin",
+        textAlign: "center",
       }}
     >
-      {name}
+      {name.split("\n").map((it) => (
+        <>
+          {it}
+          <br />
+        </>
+      ))}
     </div>
   );
 };
