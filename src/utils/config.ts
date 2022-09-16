@@ -16,7 +16,7 @@ import { ServerResetHour, useServerTime } from "./time";
 import { DateTime } from "luxon";
 import { Language } from "../langs";
 import { CharacterBackgrounds } from "../components/Background";
-import { Position, posToLatLng } from "../db/map";
+import { Position, posToLatLng } from "./mapPositionUtils";
 
 export type Config = {
   language: Language | "default";

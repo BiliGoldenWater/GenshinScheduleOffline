@@ -18,7 +18,11 @@ import IconPage from "./IconPage";
 import { getAssetByName } from "../../../assets";
 import { HStack } from "@chakra-ui/react";
 import TransparentPixel from "../../../assets/TransparentPixel.png";
-import { applyPosOffset, posToLatLng, scalePosBy } from "../../../db/map";
+import {
+  applyPosOffset,
+  posToLatLng,
+  scalePosBy,
+} from "../../../utils/mapPositionUtils";
 
 export type PopupPage = "info" | "icon";
 export const PopupPages: PopupPage[] = ["info", "icon"];

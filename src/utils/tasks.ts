@@ -10,8 +10,8 @@ import { randomStr } from "./index";
 import { getNextRefreshTime, useServerTime } from "./time";
 import { IconNames } from "../db/icons";
 import { MemorySearch } from "./memorySearch";
-import { latLngToPos, posToLatLng } from "../db/map";
 import { LatLng } from "leaflet";
+import { latLngToPos, posToLatLng } from "./mapPositionUtils";
 
 const iconIndexes = IconNames.reduce((a, b, i) => {
   a[b] = i;

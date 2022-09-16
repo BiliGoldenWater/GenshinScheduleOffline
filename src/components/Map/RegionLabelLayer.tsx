@@ -86,15 +86,15 @@ const RegionLabel = ({
   let fontSize;
   switch (level) {
     case Level.Country: {
-      fontSize = (5 * map.zoom) / Level.Country;
+      fontSize = 4;
       break;
     }
     case Level.Region: {
-      fontSize = (2.4 * map.zoom) / Level.Region;
+      fontSize = 2.4;
       break;
     }
     case Level.Place: {
-      fontSize = (1.6 * map.zoom) / Level.Place;
+      fontSize = 1.6;
       break;
     }
   }
@@ -102,11 +102,12 @@ const RegionLabel = ({
     <chakra.div
       style={{
         fontSize: `${fontSize}rem`,
+        transform: `scale(${map.zoom / level})`,
         whiteSpace: "nowrap",
         wordBreak: "keep-all",
         color: "white",
         position: "relative",
-        top: "-50%",
+        top: "-290%",
         left: "-50%",
         fontFamily: "Genshin",
       }}

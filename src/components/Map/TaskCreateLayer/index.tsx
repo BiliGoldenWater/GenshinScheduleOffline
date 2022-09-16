@@ -4,7 +4,7 @@ import TaskMarker from "../TaskMarker";
 import CreateButton from "./CreateButton";
 import { useMapEvent } from "react-leaflet";
 import { randomStr } from "../../../utils";
-import { latLngToPos } from "../../../db/map";
+import { latLngToPos } from "../../../utils/mapPositionUtils";
 
 const TaskCreateLayer = () => {
   const [task, setTask] = useConfig("mapCreateTask");

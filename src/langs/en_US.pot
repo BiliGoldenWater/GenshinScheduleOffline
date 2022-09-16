@@ -2976,19 +2976,34 @@ msgctxt "db.icons.fe8ed6"
 msgid "Crab"
 msgstr ""
 
-#: src/db/map.ts:28
+#: src/db/map.ts:34
 msgctxt "db.map.014a3d"
 msgid "Starfell Valley"
 msgstr ""
 
-#: src/db/map.ts:35
+#: src/db/map.ts:23
+msgctxt "db.map.06cea1"
+msgid "Inazuma"
+msgstr ""
+
+#: src/db/map.ts:41
 msgctxt "db.map.430ff6"
 msgid "Springvale"
 msgstr ""
 
-#: src/db/map.ts:21
+#: src/db/map.ts:15
 msgctxt "db.map.5a37ea"
 msgid "Mondstadt"
+msgstr ""
+
+#: src/db/map.ts:19
+msgctxt "db.map.691c58"
+msgid "Liyue"
+msgstr ""
+
+#: src/db/map.ts:27
+msgctxt "db.map.8d6d56"
+msgid "Sumeru"
 msgstr ""
 
 #: src/db/regions.ts:179
