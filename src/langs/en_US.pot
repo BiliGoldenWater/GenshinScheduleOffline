@@ -2976,34 +2976,149 @@ msgctxt "db.icons.fe8ed6"
 msgid "Crab"
 msgstr ""
 
-#: src/db/map.ts:34
+#: src/db/map.ts:37
 msgctxt "db.map.014a3d"
 msgid "Starfell Valley"
 msgstr ""
 
-#: src/db/map.ts:23
+#: src/db/map.ts:49
+msgctxt "db.map.05adb9"
+msgid "Windwail Highland"
+msgstr ""
+
+#: src/db/map.ts:114
+msgctxt "db.map.06c607"
+msgid "Lokapala Jungle"
+msgstr ""
+
+#: src/db/map.ts:25
 msgctxt "db.map.06cea1"
 msgid "Inazuma"
 msgstr ""
 
-#: src/db/map.ts:41
+#: src/db/map.ts:130
+msgctxt "db.map.120117"
+msgid "Vissudha Field"
+msgstr ""
+
+#: src/db/map.ts:72
+msgctxt "db.map.186405"
+msgid "Minlin"
+msgstr ""
+
+#: src/db/map.ts:87
+msgctxt "db.map.186b28"
+msgid "Narukami Island"
+msgstr ""
+
+#: src/db/map.ts:134
+msgctxt "db.map.2db171"
+msgid "Ashavan Realm"
+msgstr ""
+
+#: src/db/map.ts:146
 msgctxt "db.map.430ff6"
 msgid "Springvale"
 msgstr ""
 
-#: src/db/map.ts:15
+#: src/db/map.ts:95
+msgctxt "db.map.46eae6"
+msgid "Yashiori Island"
+msgstr ""
+
+#: src/db/map.ts:17
 msgctxt "db.map.5a37ea"
 msgid "Mondstadt"
 msgstr ""
 
-#: src/db/map.ts:19
+#: src/db/map.ts:45
+msgctxt "db.map.5d9c36"
+msgid "Brightcrown Mountains"
+msgstr ""
+
+#: src/db/map.ts:21
 msgctxt "db.map.691c58"
 msgid "Liyue"
 msgstr ""
 
-#: src/db/map.ts:27
+#: src/db/map.ts:41
+msgctxt "db.map.88c10c"
+msgid "Galesong Hill"
+msgstr ""
+
+#: src/db/map.ts:29
 msgctxt "db.map.8d6d56"
 msgid "Sumeru"
+msgstr ""
+
+#: src/db/map.ts:138
+msgctxt "db.map.9aa786"
+msgid "Lost Nursery"
+msgstr ""
+
+#: src/db/map.ts:99
+msgctxt "db.map.a4fd9f"
+msgid "Watatsumi Island"
+msgstr ""
+
+#: src/db/map.ts:64
+msgctxt "db.map.aae75c"
+msgid "Qiongji Estuary"
+msgstr ""
+
+#: src/db/map.ts:126
+msgctxt "db.map.b09429"
+msgid "Vanarana"
+msgstr ""
+
+#: src/db/map.ts:60
+msgctxt "db.map.ba088d"
+msgid "Bishui Plain"
+msgstr ""
+
+#: src/db/map.ts:76
+msgctxt "db.map.bef2bc"
+msgid "Lisha"
+msgstr ""
+
+#: src/db/map.ts:53
+msgctxt "db.map.d345ad"
+msgid "Dragonspine"
+msgstr ""
+
+#: src/db/map.ts:118
+msgctxt "db.map.d93216"
+msgid "Avidya Forest"
+msgstr ""
+
+#: src/db/map.ts:107
+msgctxt "db.map.d93fd9"
+msgid "Tsurumi Island"
+msgstr ""
+
+#: src/db/map.ts:122
+msgctxt "db.map.dfb9ed"
+msgid "Ardravi Valley"
+msgstr ""
+
+#: src/db/map.ts:68
+msgctxt "db.map.e09ef4"
+msgid "Sea of Clouds"
+msgstr ""
+
+#: src/db/map.ts:80
+msgctxt "db.map.e95896"
+msgid "The Chasm"
+msgstr ""
+
+#: src/db/map.ts:91
+msgctxt "db.map.f3fd6e"
+msgid "Kannazuka"
+msgstr ""
+
+#: src/db/map.ts:103
+msgctxt "db.map.f6a315"
+msgid "Seirai Island"
 msgstr ""
 
 #: src/db/regions.ts:179
