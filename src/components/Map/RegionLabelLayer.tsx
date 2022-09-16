@@ -1,6 +1,6 @@
 import React, { memo, ReactNode } from "react";
 import { Marker } from "react-leaflet";
-import { DivIcon } from "leaflet";
+import { CRS, DivIcon } from "leaflet";
 import { renderToString } from "react-dom/server";
 import { IntlShape, useIntl } from "react-intl";
 import {
@@ -14,7 +14,7 @@ import {
 import { Position, posToLatLng } from "../../utils/mapPositionUtils";
 
 enum Level {
-  Country = 3.8,
+  Country = 3.3,
   Region = 5.3,
   Place = MapZoomMax,
 }
@@ -121,7 +121,7 @@ const RegionLabel = ({
       break;
     }
   }
-  fontSize *= zoom / level;
+  fontSize *= CRS.Simple.scale(zoom) / CRS.Simple.scale(level);
   return (
     <div
       style={{
