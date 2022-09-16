@@ -50,7 +50,7 @@ function buildMarker(
   let label = renderToString(
     <RegionLabel
       zoom={zoom}
-      name={marker.name}
+      name={formatMessageId({ id: marker.name })}
       level={level}
       transform={{ x: 0, y: 0 }}
     />
