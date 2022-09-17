@@ -30,4 +30,4 @@
 不一定接受 [Pull Request](https://github.com/BiliGoldenWater/GenshinScheduleOffline/pulls)[^1],
 但欢迎提出 [问题或建议](https://github.com/BiliGoldenWater/GenshinScheduleOffline/issues).
 
-[^1] 可以接受代码习惯与现有代码相同的, 但是如果与未来的计划冲突则**有可能不会被合并**.
+[^1]: 可以接受代码习惯与现有代码相同的, 但是如果与未来的计划冲突则**有可能不会被合并**.
