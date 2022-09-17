@@ -132,6 +132,7 @@ const RegionLabel = ({
         color: "white",
         fontFamily: "Genshin",
         textAlign: "center",
+        textShadow: "0px 0px 0.2rem black",
       }}
     >
       {name.split("\n").map((it) => (
