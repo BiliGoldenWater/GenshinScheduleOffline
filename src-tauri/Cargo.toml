@@ -1,10 +1,10 @@
 [package]
-name = "genshin-schedule"
-version = "0.0.0"
-description = "A Tauri App"
-authors = ["you"]
-license = ""
-repository = ""
+name = "genshin-schedule-offline"
+version = "0.1.0"
+description = "A tool to help you keep track of time-related game activities in Genshin Impact."
+authors = ["phos", "Golden_Water", "Contributors on Github"]
+license = "MIT"
+repository = "https://github.com/BiliGoldenWater/GenshinScheduleOffline"
 edition = "2021"
 rust-version = "1.57"
 
@@ -21,7 +21,7 @@ tauri = { version = "1.0.0", features = ["fs-create-dir", "fs-read-dir", "fs-rea
 [features]
 # by default Tauri runs in production mode
 # when `tauri dev` runs it is executed with `cargo run --no-default-features` if `devPath` is an URL
-default = [ "custom-protocol" ]
+default = ["custom-protocol"]
 # this feature is used used for production builds where `devPath` points to the filesystem
 # DO NOT remove this
-custom-protocol = [ "tauri/custom-protocol" ]
+custom-protocol = ["tauri/custom-protocol"]

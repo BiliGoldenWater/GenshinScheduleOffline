@@ -6,7 +6,7 @@
     "distDir": "../dist"
   },
   "package": {
-    "productName": "Genshin Schedule",
+    "productName": "Genshin Schedule Offline",
     "version": "../package.json"
   },
   "tauri": {
@@ -25,7 +25,7 @@
     },
     "bundle": {
       "active": true,
-      "category": "DeveloperTool",
+      "category": "Utility",
       "copyright": "MIT",
       "deb": {
         "depends": []
@@ -38,7 +38,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "indi.goldenwater.genshinschedule",
+      "identifier": "indi.goldenwater.genshinscheduleoffline",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
