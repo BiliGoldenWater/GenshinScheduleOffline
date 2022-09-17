@@ -2981,6 +2981,16 @@ msgctxt "db.map.014a3d"
 msgid "Starfell Valley"
 msgstr ""
 
+#: src/db/map.ts:206
+msgctxt "db.map.03b6ce"
+msgid "Cider Lake"
+msgstr ""
+
+#: src/db/map.ts:193
+msgctxt "db.map.0427ba"
+msgid "Wolvendom"
+msgstr ""
+
 #: src/db/map.ts:49
 msgctxt "db.map.05adb9"
 msgid "Windwail Highland"
@@ -2996,9 +3006,49 @@ msgctxt "db.map.06cea1"
 msgid "Inazuma"
 msgstr ""
 
+#: src/db/map.ts:184
+msgctxt "db.map.082833"
+msgid "Cape Oath"
+msgstr ""
+
+#: src/db/map.ts:388
+msgctxt "db.map.08dbbb"
+msgid "Ritou"
+msgstr ""
+
+#: src/db/map.ts:605
+msgctxt "db.map.0e3e74"
+msgid "Caravan Ribat"
+msgstr ""
+
 #: src/db/map.ts:130
 msgctxt "db.map.120117"
 msgid "Vissudha Field"
+msgstr ""
+
+#: src/db/map.ts:357
+msgctxt "db.map.12df22"
+msgid "Fuao Vale"
+msgstr ""
+
+#: src/db/map.ts:324
+msgctxt "db.map.135688"
+msgid "Mt. Aocang"
+msgstr ""
+
+#: src/db/map.ts:237
+msgctxt "db.map.145456"
+msgid "Starglow Cavern"
+msgstr ""
+
+#: src/db/map.ts:233
+msgctxt "db.map.15da53"
+msgid "Skyfrost Nail"
+msgstr ""
+
+#: src/db/map.ts:151
+msgctxt "db.map.16620e"
+msgid "Starsnatch Cliff"
 msgstr ""
 
 #: src/db/map.ts:72
@@ -3011,14 +3061,134 @@ msgctxt "db.map.186b28"
 msgid "Narukami Island"
 msgstr ""
 
+#: src/db/map.ts:442
+msgctxt "db.map.1871c5"
+msgid "Fort Fujitou"
+msgstr ""
+
+#: src/db/map.ts:268
+msgctxt "db.map.1b9ba5"
+msgid "Sal Terrae"
+msgstr ""
+
+#: src/db/map.ts:454
+msgctxt "db.map.1cc970"
+msgid "Serpent's Head"
+msgstr ""
+
+#: src/db/map.ts:549
+msgctxt "db.map.1e1d2e"
+msgid "Sumeru City"
+msgstr ""
+
+#: src/db/map.ts:223
+msgctxt "db.map.1f32ba"
+msgid "Snow-Covered Path"
+msgstr ""
+
+#: src/db/map.ts:298
+msgctxt "db.map.222770"
+msgid "Mt. Tianheng"
+msgstr ""
+
+#: src/db/map.ts:365
+msgctxt "db.map.249655"
+msgid "The Chasm's Maw"
+msgstr ""
+
+#: src/db/map.ts:293
+msgctxt "db.map.2674f8"
+msgid "Cuijue Slope"
+msgstr ""
+
+#: src/db/map.ts:340
+msgctxt "db.map.27ea30"
+msgid "Jueyun Karst"
+msgstr ""
+
+#: src/db/map.ts:509
+msgctxt "db.map.2af3c5"
+msgid "Chirai Shrine"
+msgstr ""
+
+#: src/db/map.ts:596
+msgctxt "db.map.2d1140"
+msgid "Yasna Monument"
+msgstr ""
+
 #: src/db/map.ts:134
 msgctxt "db.map.2db171"
 msgid "Ashavan Realm"
 msgstr ""
 
-#: src/db/map.ts:146
+#: src/db/map.ts:210
+msgctxt "db.map.34b561"
+msgid "Mondstadt​"
+msgstr ""
+
+#: src/db/map.ts:475
+msgctxt "db.map.35834c"
+msgid "Mouun Shrine"
+msgstr ""
+
+#: src/db/map.ts:424
+msgctxt "db.map.362fa8"
+msgid "Inazuma City"
+msgstr ""
+
+#: src/db/map.ts:479
+msgctxt "db.map.36e970"
+msgid "Bourou Village"
+msgstr ""
+
+#: src/db/map.ts:600
+msgctxt "db.map.399cf8"
+msgid "Pardis Dhyai"
+msgstr ""
+
+#: src/db/map.ts:245
+msgctxt "db.map.3af338"
+msgid "Entombed City - Outskirts"
+msgstr ""
+
+#: src/db/map.ts:353
+msgctxt "db.map.3c1bc5"
+msgid "Lumberpick Valley"
+msgstr ""
+
+#: src/db/map.ts:429
+msgctxt "db.map.3c393b"
+msgid "Kujou Encampment"
+msgstr ""
+
+#: src/db/map.ts:369
+msgctxt "db.map.3f018d"
+msgid "Cinnabar Cliff"
+msgstr ""
+
+#: src/db/map.ts:467
+msgctxt "db.map.3fe86e"
+msgid "Suigetsu Pool"
+msgstr ""
+
+#: src/db/map.ts:197
 msgctxt "db.map.430ff6"
 msgid "Springvale"
+msgstr ""
+
+#: src/db/map.ts:553
+msgctxt "db.map.44c2e9"
+msgid "Gandha Hill"
+msgstr ""
+
+#: src/db/map.ts:458
+msgctxt "db.map.4561c2"
+msgid "Jakotsu Mine"
+msgstr ""
+
+#: src/db/map.ts:361
+msgctxt "db.map.465083"
+msgid "The Surface"
 msgstr ""
 
 #: src/db/map.ts:95
@@ -3026,9 +3196,79 @@ msgctxt "db.map.46eae6"
 msgid "Yashiori Island"
 msgstr ""
 
+#: src/db/map.ts:513
+msgctxt "db.map.47746c"
+msgid "Oina Beach"
+msgstr ""
+
+#: src/db/map.ts:218
+msgctxt "db.map.48d455"
+msgid "Stormterror's Lair"
+msgstr ""
+
+#: src/db/map.ts:281
+msgctxt "db.map.4a30b1"
+msgid "Wangshu Inn"
+msgstr ""
+
+#: src/db/map.ts:289
+msgctxt "db.map.4b454f"
+msgid "Luhua Pool"
+msgstr ""
+
+#: src/db/map.ts:578
+msgctxt "db.map.4ce9fc"
+msgid "Port Ormos"
+msgstr ""
+
+#: src/db/map.ts:373
+msgctxt "db.map.4d75aa"
+msgid "Tiangong Gorge"
+msgstr ""
+
+#: src/db/map.ts:315
+msgctxt "db.map.510a40"
+msgid "Lingju Pass"
+msgstr ""
+
+#: src/db/map.ts:392
+msgctxt "db.map.539d34"
+msgid "Araumi"
+msgstr ""
+
+#: src/db/map.ts:306
+msgctxt "db.map.540286"
+msgid "Guyun Stone Forest"
+msgstr ""
+
+#: src/db/map.ts:565
+msgctxt "db.map.54a18a"
+msgid "Gandharva Ville"
+msgstr ""
+
+#: src/db/map.ts:500
+msgctxt "db.map.567e6f"
+msgid "Asase Shrine"
+msgstr ""
+
+#: src/db/map.ts:348
+msgctxt "db.map.576457"
+msgid "Tianqiu Valley"
+msgstr ""
+
+#: src/db/map.ts:332
+msgctxt "db.map.587277"
+msgid "Qingyun Peak"
+msgstr ""
+
 #: src/db/map.ts:17
 msgctxt "db.map.5a37ea"
 msgid "Mondstadt"
+msgstr ""
+
+#: src/db/map.ts:377
+msgctxt "db.map.5c420b"
+msgid "Glaze Peak"
 msgstr ""
 
 #: src/db/map.ts:45
@@ -3036,9 +3276,89 @@ msgctxt "db.map.5d9c36"
 msgid "Brightcrown Mountains"
 msgstr ""
 
+#: src/db/map.ts:521
+msgctxt "db.map.5f8e44"
+msgid "Mt. Kanna"
+msgstr ""
+
+#: src/db/map.ts:446
+msgctxt "db.map.60c3b3"
+msgid "Musoujin Gorge"
+msgstr ""
+
+#: src/db/map.ts:496
+msgctxt "db.map.622672"
+msgid "Amakumo Peak"
+msgstr ""
+
+#: src/db/map.ts:462
+msgctxt "db.map.65e7f6"
+msgid "Fort Mumei"
+msgstr ""
+
+#: src/db/map.ts:155
+msgctxt "db.map.67056c"
+msgid "Thousand Winds Temple"
+msgstr ""
+
 #: src/db/map.ts:21
 msgctxt "db.map.691c58"
 msgid "Liyue"
+msgstr ""
+
+#: src/db/map.ts:412
+msgctxt "db.map.6cc6a1"
+msgid "Chinju Forest"
+msgstr ""
+
+#: src/db/map.ts:176
+msgctxt "db.map.6da2ab"
+msgid "Falcon Coast"
+msgstr ""
+
+#: src/db/map.ts:167
+msgctxt "db.map.6dcc87"
+msgid "Whispering Woods"
+msgstr ""
+
+#: src/db/map.ts:396
+msgctxt "db.map.711557"
+msgid "Grand Narukami Shrine"
+msgstr ""
+
+#: src/db/map.ts:272
+msgctxt "db.map.74fcf0"
+msgid "Mingyun Village"
+msgstr ""
+
+#: src/db/map.ts:471
+msgctxt "db.map.77c501"
+msgid "Sangonomiya Shrine"
+msgstr ""
+
+#: src/db/map.ts:433
+msgctxt "db.map.78b2d8"
+msgid "Tatarasuna"
+msgstr ""
+
+#: src/db/map.ts:285
+msgctxt "db.map.7febf1"
+msgid "Guili Plains"
+msgstr ""
+
+#: src/db/map.ts:488
+msgctxt "db.map.800c9e"
+msgid "Koseki Village"
+msgstr ""
+
+#: src/db/map.ts:163
+msgctxt "db.map.8566ec"
+msgid "Starfell Lake"
+msgstr ""
+
+#: src/db/map.ts:561
+msgctxt "db.map.879de8"
+msgid "Yazadaha Pool"
 msgstr ""
 
 #: src/db/map.ts:41
@@ -3046,9 +3366,29 @@ msgctxt "db.map.88c10c"
 msgid "Galesong Hill"
 msgstr ""
 
+#: src/db/map.ts:252
+msgctxt "db.map.8cfe9e"
+msgid "Qingce Village"
+msgstr ""
+
 #: src/db/map.ts:29
 msgctxt "db.map.8d6d56"
 msgid "Sumeru"
+msgstr ""
+
+#: src/db/map.ts:517
+msgctxt "db.map.8d807b"
+msgid "Autake Plains"
+msgstr ""
+
+#: src/db/map.ts:264
+msgctxt "db.map.8e2190"
+msgid "Dihua Marsh"
+msgstr ""
+
+#: src/db/map.ts:544
+msgctxt "db.map.94c5bb"
+msgid "Chatrakam Cave"
 msgstr ""
 
 #: src/db/map.ts:138
@@ -3056,9 +3396,29 @@ msgctxt "db.map.9aa786"
 msgid "Lost Nursery"
 msgstr ""
 
+#: src/db/map.ts:214
+msgctxt "db.map.9aa982"
+msgid "Brightcrown Canyon"
+msgstr ""
+
+#: src/db/map.ts:484
+msgctxt "db.map.a1f4d6"
+msgid "Fort Hiraumi"
+msgstr ""
+
 #: src/db/map.ts:99
 msgctxt "db.map.a4fd9f"
 msgid "Watatsumi Island"
+msgstr ""
+
+#: src/db/map.ts:328
+msgctxt "db.map.a61d69"
+msgid "Huaguang Stone Forest"
+msgstr ""
+
+#: src/db/map.ts:302
+msgctxt "db.map.aaa08a"
+msgid "Liyue Harbor"
 msgstr ""
 
 #: src/db/map.ts:64
@@ -3066,9 +3426,54 @@ msgctxt "db.map.aae75c"
 msgid "Qiongji Estuary"
 msgstr ""
 
-#: src/db/map.ts:126
+#: src/db/map.ts:384
+msgctxt "db.map.ab2bfa"
+msgid "Jinren Island"
+msgstr ""
+
+#: src/db/map.ts:276
+msgctxt "db.map.ab7b85"
+msgid "Yaoguang Shoal"
+msgstr ""
+
+#: src/db/map.ts:529
+msgctxt "db.map.ab7fde"
+msgid "Wakukau Shoal"
+msgstr ""
+
+#: src/db/map.ts:404
+msgctxt "db.map.ad0bdf"
+msgid "Kamisato Estate"
+msgstr ""
+
+#: src/db/map.ts:311
+msgctxt "db.map.ad2439"
+msgid "Dunyu Ruins"
+msgstr ""
+
+#: src/db/map.ts:256
+msgctxt "db.map.afc0c3"
+msgid "Wuwang Hill"
+msgstr ""
+
+#: src/db/map.ts:540
+msgctxt "db.map.b05b52"
+msgid "The Palace of Alcazarzaray"
+msgstr ""
+
+#: src/db/map.ts:583
 msgctxt "db.map.b09429"
 msgid "Vanarana"
+msgstr ""
+
+#: src/db/map.ts:613
+msgctxt "db.map.b5159a"
+msgid "Apam Woods"
+msgstr ""
+
+#: src/db/map.ts:227
+msgctxt "db.map.b724b2"
+msgid "Entombed City - Ancient Palace"
 msgstr ""
 
 #: src/db/map.ts:60
@@ -3081,9 +3486,74 @@ msgctxt "db.map.bef2bc"
 msgid "Lisha"
 msgstr ""
 
+#: src/db/map.ts:180
+msgctxt "db.map.bf26ec"
+msgid "Dadaupa Gorge"
+msgstr ""
+
+#: src/db/map.ts:438
+msgctxt "db.map.c1e6dc"
+msgid "Nazuchi Beach"
+msgstr ""
+
+#: src/db/map.ts:188
+msgctxt "db.map.c333f8"
+msgid "Musk Reef"
+msgstr ""
+
+#: src/db/map.ts:159
+msgctxt "db.map.c3ef8e"
+msgid "Stormbearer Mountains"
+msgstr ""
+
+#: src/db/map.ts:344
+msgctxt "db.map.c42db6"
+msgid "Nantianmen"
+msgstr ""
+
+#: src/db/map.ts:570
+msgctxt "db.map.c4c46f"
+msgid "Vimara Village"
+msgstr ""
+
+#: src/db/map.ts:609
+msgctxt "db.map.c5c9c6"
+msgid "Ruins of Dahri"
+msgstr ""
+
+#: src/db/map.ts:574
+msgctxt "db.map.ca477c"
+msgid "Devantaka Mountain"
+msgstr ""
+
+#: src/db/map.ts:408
+msgctxt "db.map.caca41"
+msgid "Konda Village"
+msgstr ""
+
+#: src/db/map.ts:416
+msgctxt "db.map.cad722"
+msgid "Byakko Plain"
+msgstr ""
+
+#: src/db/map.ts:147
+msgctxt "db.map.cb3dbb"
+msgid "Stormbearer Point"
+msgstr ""
+
+#: src/db/map.ts:592
+msgctxt "db.map.cd6b0a"
+msgid "Fane of Ashvattha"
+msgstr ""
+
 #: src/db/map.ts:53
 msgctxt "db.map.d345ad"
 msgid "Dragonspine"
+msgstr ""
+
+#: src/db/map.ts:587
+msgctxt "db.map.d3b561"
+msgid "Old Vanarana"
 msgstr ""
 
 #: src/db/map.ts:118
@@ -3096,6 +3566,16 @@ msgctxt "db.map.d93fd9"
 msgid "Tsurumi Island"
 msgstr ""
 
+#: src/db/map.ts:505
+msgctxt "db.map.dbeba2"
+msgid "Shirikoro Peak"
+msgstr ""
+
+#: src/db/map.ts:400
+msgctxt "db.map.dec680"
+msgid "Mt. Yougou"
+msgstr ""
+
 #: src/db/map.ts:122
 msgctxt "db.map.dfb9ed"
 msgid "Ardravi Valley"
@@ -3106,9 +3586,39 @@ msgctxt "db.map.e09ef4"
 msgid "Sea of Clouds"
 msgstr ""
 
+#: src/db/map.ts:420
+msgctxt "db.map.e32be1"
+msgid "Amakane Island"
+msgstr ""
+
+#: src/db/map.ts:536
+msgctxt "db.map.e7bc85"
+msgid "Mawtiyima Forest"
+msgstr ""
+
+#: src/db/map.ts:336
+msgctxt "db.map.e8f2c9"
+msgid "Mt. Hulao"
+msgstr ""
+
 #: src/db/map.ts:80
 msgctxt "db.map.e95896"
 msgid "The Chasm"
+msgstr ""
+
+#: src/db/map.ts:171
+msgctxt "db.map.eabd3a"
+msgid "Windrise"
+msgstr ""
+
+#: src/db/map.ts:241
+msgctxt "db.map.ee39fa"
+msgid "Wyrmrest Valley"
+msgstr ""
+
+#: src/db/map.ts:450
+msgctxt "db.map.efdc86"
+msgid "Higi Village"
 msgstr ""
 
 #: src/db/map.ts:91
@@ -3116,9 +3626,39 @@ msgctxt "db.map.f3fd6e"
 msgid "Kannazuka"
 msgstr ""
 
+#: src/db/map.ts:525
+msgctxt "db.map.f4bd09"
+msgid "Moshiri Ceremonial Site"
+msgstr ""
+
 #: src/db/map.ts:103
 msgctxt "db.map.f6a315"
 msgid "Seirai Island"
+msgstr ""
+
+#: src/db/map.ts:557
+msgctxt "db.map.f754b4"
+msgid "Chinvat Ravine"
+msgstr ""
+
+#: src/db/map.ts:260
+msgctxt "db.map.f7d6f3"
+msgid "Stone Gate"
+msgstr ""
+
+#: src/db/map.ts:201
+msgctxt "db.map.f978c6"
+msgid "Dawn Winery"
+msgstr ""
+
+#: src/db/map.ts:492
+msgctxt "db.map.facd49"
+msgid "\"Seiraimaru\""
+msgstr ""
+
+#: src/db/map.ts:319
+msgctxt "db.map.fbe305"
+msgid "Qingxu Pool"
 msgstr ""
 
 #: src/db/regions.ts:179
