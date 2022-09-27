@@ -896,22 +896,22 @@ msgctxt "components.TaskListCard.DoneButton.927523"
 msgid "Mark as done"
 msgstr ""
 
-#: src/components/TaskListCard/HideButton.tsx:44
+#: src/components/TaskListCard/HideButton.tsx:52
 msgctxt "components.TaskListCard.HideButton.2bb024"
 msgid "Show"
 msgstr ""
 
-#: src/components/TaskListCard/HideButton.tsx:28
+#: src/components/TaskListCard/HideButton.tsx:33
 msgctxt "components.TaskListCard.HideButton.3106fe"
 msgid "Unhide"
 msgstr ""
 
-#: src/components/TaskListCard/HideButton.tsx:43
+#: src/components/TaskListCard/HideButton.tsx:51
 msgctxt "components.TaskListCard.HideButton.540fd9"
 msgid "Hide"
 msgstr ""
 
-#: src/components/TaskListCard/HideButton.tsx:26
+#: src/components/TaskListCard/HideButton.tsx:31
 msgctxt "components.TaskListCard.HideButton.fdf592"
 msgid "Hide temporarily"
 msgstr ""

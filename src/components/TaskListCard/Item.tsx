@@ -108,7 +108,7 @@ const Item = ({
 
       <chakra.div flexShrink={0}>
         <ButtonGroup>
-          {showHidden && <HideButton task={task} setTask={setTask} />}
+          <HideButton task={task} setTask={setTask} alwaysShow={showHidden} />
           <DoneButton task={task} setTask={setTask} rounded />
         </ButtonGroup>
       </chakra.div>
