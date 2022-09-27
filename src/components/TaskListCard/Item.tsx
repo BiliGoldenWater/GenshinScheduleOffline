@@ -58,7 +58,11 @@ const Item = ({
     >
       <HStack
         spacing={2}
-        bg={task.highlight ? highlightColor : undefined}
+        bg={
+          task.highlight
+            ? `linear-gradient(90deg ,${highlightColor}, ${highlightColor}00)`
+            : undefined
+        }
         borderRadius="sm"
         flex={1}
       >
