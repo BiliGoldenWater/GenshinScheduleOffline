@@ -1,7 +1,12 @@
-import React, { memo, useCallback, useRef, useState } from "react";
+import React, { memo, useCallback, useRef } from "react";
 import WidgetWrapper from "../WidgetWrapper";
 import WhiteCard from "../../WhiteCard";
-import { getResinRecharge, ResinCap, roundResin } from "../../../db/resins";
+import {
+  getResinRecharge,
+  ResinCap,
+  ResinsPerMinute,
+  roundResin,
+} from "../../../db/resins";
 import SideButtons from "./SideButtons";
 import EstimatorByTime from "./EstimatorByTime";
 import EstimatorByResin from "./EstimatorByResin";
@@ -12,16 +17,15 @@ import {
   ButtonGroup,
   chakra,
   HStack,
-  Spacer,
   StackDivider,
   useColorModeValue,
-  useMediaQuery,
   VStack,
 } from "@chakra-ui/react";
-import { motion } from "framer-motion";
 import { useServerTime } from "../../../utils/time";
 import { FormattedMessage, useIntl } from "react-intl";
 import AutoSizeInput from "../../AutoSizeInput";
+import { Duration } from "luxon";
+import { formatResinRemainingTime } from "../../../utils/resin";
 
 const estimateModes: Config["resinEstimateMode"][] = ["time", "value"];
 
@@ -30,12 +34,10 @@ const Resin = () => {
   const [resin, setResin] = useConfig("resin");
   const [, setStats] = useCurrentStats();
   const [mode, setMode] = useConfig("resinEstimateMode");
-  const [hover, setHover] = useState(false);
-  const [isTouchDevice] = useMediaQuery("(any-pointer: coarse)");
 
   const resinInput = useRef<HTMLInputElement>(null);
 
-  const time = useServerTime(60000);
+  const time = useServerTime(1000);
   const current = resin.value + getResinRecharge(time.valueOf() - resin.time);
 
   const applyResinOffset = useCallback(
@@ -52,7 +54,6 @@ const Resin = () => {
     <WidgetWrapper
       type="resin"
       heading={<FormattedMessage defaultMessage="Resin Calculator" />}
-      onHover={setHover}
     >
       <WhiteCard>
         <HStack spacing={2}>
@@ -111,13 +112,28 @@ const Resin = () => {
 
           <chakra.div flexShrink={0} fontSize="sm" color="gray.500">
             / {ResinCap}
+            {current + 1 < ResinCap ? (
+              (() => {
+                const duration = Duration.fromObject({
+                  minutes: (1 - (current % 1)) / ResinsPerMinute,
+                });
+                return (
+                  <>
+                    {" "}
+                    -{" "}
+                    <FormattedMessage
+                      defaultMessage={"Next in {nextTime}"}
+                      values={{
+                        nextTime: formatResinRemainingTime(duration, time),
+                      }}
+                    />
+                  </>
+                );
+              })()
+            ) : (
+              <></>
+            )}
           </chakra.div>
-
-          <Spacer />
-
-          <motion.div animate={{ opacity: hover || isTouchDevice ? 1 : 0 }}>
-            <SideButtons current={current} />
-          </motion.div>
         </HStack>
 
         <VStack
@@ -142,26 +158,30 @@ const Resin = () => {
             <EstimatorByResin />
           ) : null}
 
-          <ButtonGroup isAttached>
-            <Button
-              color="gray.500"
-              size="xs"
-              onClick={() => {
-                applyResinOffset(1);
-              }}
-            >
-              +1s
-            </Button>
-            <Button
-              color="gray.500"
-              size="xs"
-              onClick={() => {
-                applyResinOffset(-1);
-              }}
-            >
-              -1s
-            </Button>
-          </ButtonGroup>
+          <HStack>
+            <ButtonGroup isAttached>
+              <Button
+                color="gray.500"
+                size="sm"
+                onClick={() => {
+                  applyResinOffset(1);
+                }}
+              >
+                +1s
+              </Button>
+              <Button
+                color="gray.500"
+                size="sm"
+                onClick={() => {
+                  applyResinOffset(-1);
+                }}
+              >
+                -1s
+              </Button>
+            </ButtonGroup>
+
+            <SideButtons current={current} />
+          </HStack>
         </VStack>
       </WhiteCard>
     </WidgetWrapper>

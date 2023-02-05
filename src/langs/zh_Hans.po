@@ -538,6 +538,11 @@ msgctxt "components.Home.Clock.index.2cbf2a"
 msgid "Time in Teyvat"
 msgstr "提瓦特时间"
 
+#: src/components/Home/Resin/index.tsx:124
+msgctxt "components.Home.Resin.index.ed6af9"
+msgid "Next in {nextTime}"
+msgstr "下一个需 {nextTime}"
+
 #: components/Home/DomainView/ArtifactList.tsx:16
 msgctxt "components.Home.DomainView.ArtifactList.742197"
 msgid "This item is not guaranteed to drop."

@@ -1,10 +1,6 @@
 import React, { memo, useMemo } from "react";
 import { useConfig } from "../../../utils/config";
-import {
-  useFormatDuration,
-  useFormatTime,
-  useServerTime,
-} from "../../../utils/time";
+import { useServerTime } from "../../../utils/time";
 import {
   getResinRecharge,
   ResinCap,
@@ -12,17 +8,19 @@ import {
 } from "../../../db/resins";
 import { Duration } from "luxon";
 import { FormattedMessage } from "react-intl";
+import { formatResinRemainingTime } from "../../../utils/resin";
 
 const EstimatorByResin = () => {
   const [resin] = useConfig("resin");
   const time = useServerTime(1000);
 
   const values = useMemo(() => {
+    const currentResin =
+      resin.value + getResinRecharge(time.valueOf() - resin.time);
     const result: { remainingTime: Duration; value: number }[] = [];
 
     const addValue = (value: number) => {
-      const remainingResins =
-        value - (resin.value + getResinRecharge(time.valueOf() - resin.time));
+      const remainingResins = value - currentResin;
       const remainingTime = Duration.fromObject({
         minutes: remainingResins / ResinsPerMinute,
       });
@@ -50,14 +48,7 @@ const EstimatorByResin = () => {
             defaultMessage="{value} in {time}"
             values={{
               value,
-              time: [
-                useFormatDuration(remainingTime, ["hour", "minute", "second"]),
-                `(${useFormatTime(time.plus(remainingTime), [
-                  "hour",
-                  "minute",
-                  "second",
-                ])})`,
-              ].join(" "),
+              time: formatResinRemainingTime(remainingTime, time, true),
             }}
           />
         </div>

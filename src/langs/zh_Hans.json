@@ -99,6 +99,7 @@
   "components.Home.Clock.TimeDisplay.44c3b9": "前一天",
   "components.Home.Clock.TimeDisplay.dd708b": "后一天",
   "components.Home.Clock.index.2cbf2a": "提瓦特时间",
+  "components.Home.Resin.index.ed6af9": "下一个需 {nextTime}",
   "components.Home.DomainView.DomainDisplay.0388b5": "{region}, {category}",
   "components.Home.DomainView.FilterRegionButtons.06cea1": "稻妻",
   "components.Home.DomainView.FilterRegionButtons.5a37ea": "蒙德",

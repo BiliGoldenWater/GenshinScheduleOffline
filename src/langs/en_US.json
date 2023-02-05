@@ -106,6 +106,7 @@
   "components.Home.Resin.SideButtons.9f72cf": "Add {amount} resins",
   "components.Home.Resin.index.506b0c": "Your resins are full.",
   "components.Home.Resin.index.c3eb42": "Switch estimation mode",
+  "components.Home.Resin.index.ed6af9": "Next in {nextTime}",
   "components.Home.Resin.index.fe85b2": "Resin Calculator",
   "components.Home.Tasks.MarkAllDone.ec7046": "Mark everything as done",
   "components.Home.Tasks.SearchButton.c66715": "Search",
