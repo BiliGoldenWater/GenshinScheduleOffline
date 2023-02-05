@@ -1,4 +1,4 @@
-import React, { memo, useRef, useState } from "react";
+import React, { memo, useCallback, useRef, useState } from "react";
 import WidgetWrapper from "../WidgetWrapper";
 import WhiteCard from "../../WhiteCard";
 import { getResinRecharge, ResinCap, roundResin } from "../../../db/resins";
@@ -7,7 +7,17 @@ import EstimatorByTime from "./EstimatorByTime";
 import EstimatorByResin from "./EstimatorByResin";
 import { Config, useConfig, useCurrentStats } from "../../../utils/config";
 import { Resin as ResinIcon } from "../../../assets";
-import { chakra, HStack, Spacer, StackDivider, useColorModeValue, useMediaQuery, VStack } from "@chakra-ui/react";
+import {
+  Button,
+  ButtonGroup,
+  chakra,
+  HStack,
+  Spacer,
+  StackDivider,
+  useColorModeValue,
+  useMediaQuery,
+  VStack,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useServerTime } from "../../../utils/time";
 import { FormattedMessage, useIntl } from "react-intl";
@@ -27,6 +37,16 @@ const Resin = () => {
 
   const time = useServerTime(60000);
   const current = resin.value + getResinRecharge(time.valueOf() - resin.time);
+
+  const applyResinOffset = useCallback(
+    (offset: number) => {
+      setResin({
+        value: resin.value,
+        time: resin.time + offset * 1000,
+      });
+    },
+    [resin]
+  );
 
   return (
     <WidgetWrapper
@@ -51,8 +71,8 @@ const Resin = () => {
 
               setMode((mode) => {
                 return estimateModes[
-                (estimateModes.indexOf(mode) + 1) % estimateModes.length
-                  ];
+                  (estimateModes.indexOf(mode) + 1) % estimateModes.length
+                ];
               });
             }}
           />
@@ -74,7 +94,7 @@ const Resin = () => {
 
               setResin({
                 value: newValue,
-                time: time.valueOf()
+                time: time.valueOf(),
               });
 
               setStats(
@@ -83,7 +103,7 @@ const Resin = () => {
                     ...stats,
                     resinsSpent: roundResin(
                       stats.resinsSpent - newValue + oldValue
-                    )
+                    ),
                   }
               );
             }}
@@ -121,6 +141,27 @@ const Resin = () => {
           ) : mode === "value" ? (
             <EstimatorByResin />
           ) : null}
+
+          <ButtonGroup isAttached>
+            <Button
+              color="gray.500"
+              size="xs"
+              onClick={() => {
+                applyResinOffset(1);
+              }}
+            >
+              +1s
+            </Button>
+            <Button
+              color="gray.500"
+              size="xs"
+              onClick={() => {
+                applyResinOffset(-1);
+              }}
+            >
+              -1s
+            </Button>
+          </ButtonGroup>
         </VStack>
       </WhiteCard>
     </WidgetWrapper>
