@@ -7,7 +7,7 @@ import { FormattedMessage } from "react-intl";
 
 const EstimatorByResin = () => {
   const [resin] = useConfig("resin");
-  const time = useServerTime(60000);
+  const time = useServerTime(1000);
 
   const values = useMemo(() => {
     const result: { remainingTime: Duration; value: number }[] = [];
