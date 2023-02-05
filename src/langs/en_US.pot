@@ -506,7 +506,7 @@ msgctxt "components.Home.Resin.EstimatorByNotifyMark.5921a5"
 msgid "{value} in {time}"
 msgstr ""
 
-#: src/components/Home/Resin/EstimatorByResin.tsx:49
+#: src/components/Home/Resin/EstimatorByResin.tsx:41
 msgctxt "components.Home.Resin.EstimatorByResin.5921a5"
 msgid "{value} in {time}"
 msgstr ""
@@ -526,17 +526,17 @@ msgctxt "components.Home.Resin.SideButtons.9f72cf"
 msgid "Add {amount} resins"
 msgstr ""
 
-#: src/components/Home/Resin/index.tsx:130
+#: src/components/Home/Resin/index.tsx:117
 msgctxt "components.Home.Resin.index.506b0c"
 msgid "Your resins are full."
 msgstr ""
 
-#: src/components/Home/Resin/index.tsx:54
+#: src/components/Home/Resin/index.tsx:41
 msgctxt "components.Home.Resin.index.c3eb42"
 msgid "Switch estimation mode"
 msgstr ""
 
-#: src/components/Home/Resin/index.tsx:47
+#: src/components/Home/Resin/index.tsx:34
 msgctxt "components.Home.Resin.index.fe85b2"
 msgid "Resin Calculator"
 msgstr ""
@@ -916,7 +916,7 @@ msgctxt "components.TaskListCard.HideButton.fdf592"
 msgid "Hide temporarily"
 msgstr ""
 
-#: src/components/TaskListCard/Item.tsx:67
+#: src/components/TaskListCard/Item.tsx:71
 msgctxt "components.TaskListCard.Item.0ababe"
 msgid "Highlight task"
 msgstr ""

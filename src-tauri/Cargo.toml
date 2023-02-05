@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "A tool to help you keep track of time-related game activities in Genshin Impact."
 authors = ["phos", "Golden_Water", "Contributors on Github"]
 license = "MIT"
-repository = "https://github.com/BiliGoldenWater/GenshinScheduleOffline"
+repository = "https://github.com/BillGoldenWater/GenshinScheduleOffline"
 edition = "2021"
 rust-version = "1.57"
 

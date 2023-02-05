@@ -28,8 +28,8 @@ project, all information can be found in their website.
 
 ## Contribute
 
-Not happy with [Pull Request](https://github.com/BiliGoldenWater/GenshinScheduleOffline/pulls)[^1],
-but [Issues](https://github.com/BiliGoldenWater/GenshinScheduleOffline/issues) are welcome.
+Not happy with [Pull Request](https://github.com/BillGoldenWater/GenshinScheduleOffline/pulls)[^1],
+but [Issues](https://github.com/BillGoldenWater/GenshinScheduleOffline/issues) are welcome.
 
 [^1]: It's fine if you can follow the "code habits" of current code,
 but ***may* not be merged** if it's conflict with future plan.
