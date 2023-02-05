@@ -136,10 +136,10 @@ const RegionLabel = ({
       }}
     >
       {name.split("\n").map((it) => (
-        <>
+        <React.Fragment key={it}>
           {it}
           <br />
-        </>
+        </React.Fragment>
       ))}
     </div>
   );
