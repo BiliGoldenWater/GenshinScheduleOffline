@@ -506,7 +506,7 @@ msgctxt "components.Home.Resin.EstimatorByNotifyMark.5921a5"
 msgid "{value} in {time}"
 msgstr ""
 
-#: src/components/Home/Resin/EstimatorByResin.tsx:41
+#: src/components/Home/Resin/EstimatorByResin.tsx:49
 msgctxt "components.Home.Resin.EstimatorByResin.5921a5"
 msgid "{value} in {time}"
 msgstr ""
@@ -526,17 +526,17 @@ msgctxt "components.Home.Resin.SideButtons.9f72cf"
 msgid "Add {amount} resins"
 msgstr ""
 
-#: src/components/Home/Resin/index.tsx:117
+#: src/components/Home/Resin/index.tsx:137
 msgctxt "components.Home.Resin.index.506b0c"
 msgid "Your resins are full."
 msgstr ""
 
-#: src/components/Home/Resin/index.tsx:41
+#: src/components/Home/Resin/index.tsx:61
 msgctxt "components.Home.Resin.index.c3eb42"
 msgid "Switch estimation mode"
 msgstr ""
 
-#: src/components/Home/Resin/index.tsx:34
+#: src/components/Home/Resin/index.tsx:54
 msgctxt "components.Home.Resin.index.fe85b2"
 msgid "Resin Calculator"
 msgstr ""

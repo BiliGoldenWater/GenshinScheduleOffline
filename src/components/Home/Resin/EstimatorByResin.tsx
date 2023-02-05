@@ -1,7 +1,15 @@
 import React, { memo, useMemo } from "react";
 import { useConfig } from "../../../utils/config";
-import { useFormatDuration, useFormatTime, useServerTime } from "../../../utils/time";
-import { getResinRecharge, ResinCap, ResinsPerMinute } from "../../../db/resins";
+import {
+  useFormatDuration,
+  useFormatTime,
+  useServerTime,
+} from "../../../utils/time";
+import {
+  getResinRecharge,
+  ResinCap,
+  ResinsPerMinute,
+} from "../../../db/resins";
 import { Duration } from "luxon";
 import { FormattedMessage } from "react-intl";
 
@@ -16,13 +24,13 @@ const EstimatorByResin = () => {
       const remainingResins =
         value - (resin.value + getResinRecharge(time.valueOf() - resin.time));
       const remainingTime = Duration.fromObject({
-        minutes: remainingResins / ResinsPerMinute
+        minutes: remainingResins / ResinsPerMinute,
       });
 
       if (remainingResins > 0) {
         result.push({
           remainingTime,
-          value
+          value,
         });
       }
     };
@@ -46,9 +54,10 @@ const EstimatorByResin = () => {
                 useFormatDuration(remainingTime, ["hour", "minute", "second"]),
                 `(${useFormatTime(time.plus(remainingTime), [
                   "hour",
-                  "minute", "second"
-                ])})`
-              ].join(" ")
+                  "minute",
+                  "second",
+                ])})`,
+              ].join(" "),
             }}
           />
         </div>
