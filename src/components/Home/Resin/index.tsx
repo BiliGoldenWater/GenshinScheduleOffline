@@ -7,23 +7,11 @@ import EstimatorByTime from "./EstimatorByTime";
 import EstimatorByResin from "./EstimatorByResin";
 import { Config, useConfig, useCurrentStats } from "../../../utils/config";
 import { Resin as ResinIcon } from "../../../assets";
-import {
-  chakra,
-  HStack,
-  Icon,
-  Link,
-  Spacer,
-  StackDivider,
-  useColorModeValue,
-  useMediaQuery,
-  VStack,
-} from "@chakra-ui/react";
+import { chakra, HStack, Spacer, StackDivider, useColorModeValue, useMediaQuery, VStack } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useServerTime } from "../../../utils/time";
-import EstimatorByNotifyMark from "./EstimatorByNotifyMark";
 import { FormattedMessage, useIntl } from "react-intl";
 import AutoSizeInput from "../../AutoSizeInput";
-import { Bell } from "react-feather";
 
 const estimateModes: Config["resinEstimateMode"][] = ["time", "value"];
 
@@ -32,7 +20,6 @@ const Resin = () => {
   const [resin, setResin] = useConfig("resin");
   const [, setStats] = useCurrentStats();
   const [mode, setMode] = useConfig("resinEstimateMode");
-  const [notifyMark] = useConfig("resinNotifyMark");
   const [hover, setHover] = useState(false);
   const [isTouchDevice] = useMediaQuery("(any-pointer: coarse)");
 
@@ -64,8 +51,8 @@ const Resin = () => {
 
               setMode((mode) => {
                 return estimateModes[
-                  (estimateModes.indexOf(mode) + 1) % estimateModes.length
-                ];
+                (estimateModes.indexOf(mode) + 1) % estimateModes.length
+                  ];
               });
             }}
           />
@@ -87,7 +74,7 @@ const Resin = () => {
 
               setResin({
                 value: newValue,
-                time: time.valueOf(),
+                time: time.valueOf()
               });
 
               setStats(
@@ -96,7 +83,7 @@ const Resin = () => {
                     ...stats,
                     resinsSpent: roundResin(
                       stats.resinsSpent - newValue + oldValue
-                    ),
+                    )
                   }
               );
             }}
@@ -134,16 +121,6 @@ const Resin = () => {
           ) : mode === "value" ? (
             <EstimatorByResin />
           ) : null}
-
-          {notifyMark !== ResinCap && current < notifyMark && (
-            <HStack spacing={1} ml={-4}>
-              <Icon as={Bell} w={3} fontSize="xs" />
-
-              <Link href={"/src/pages/home/notifications/queue"}>
-                <EstimatorByNotifyMark />
-              </Link>
-            </HStack>
-          )}
         </VStack>
       </WhiteCard>
     </WidgetWrapper>
