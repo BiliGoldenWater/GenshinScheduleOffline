@@ -1,5 +1,6 @@
 export const ResinCap = 160;
 export const ResinsPerMinute = 1 / 8;
+export const ResinsPerCondensed = 40;
 
 export function getResinRecharge(ms: number) {
   return (ms / 60000) * ResinsPerMinute;

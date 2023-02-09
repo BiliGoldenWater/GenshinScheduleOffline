@@ -4,6 +4,7 @@ import WhiteCard from "../../WhiteCard";
 import {
   getResinRecharge,
   ResinCap,
+  ResinsPerCondensed,
   ResinsPerMinute,
   roundResin,
 } from "../../../db/resins";
@@ -13,6 +14,7 @@ import EstimatorByResin from "./EstimatorByResin";
 import { Config, useConfig, useCurrentStats } from "../../../utils/config";
 import { Resin as ResinIcon } from "../../../assets";
 import {
+  Badge,
   Button,
   ButtonGroup,
   chakra,
@@ -49,6 +51,7 @@ const Resin = () => {
     },
     [resin]
   );
+  const condensedNum = Math.floor(current / ResinsPerCondensed);
 
   return (
     <WidgetWrapper
@@ -77,6 +80,7 @@ const Resin = () => {
               });
             }}
           />
+          {condensedNum > 0 ? <Badge>{condensedNum}</Badge> : <></>}
 
           <AutoSizeInput
             ref={resinInput}
