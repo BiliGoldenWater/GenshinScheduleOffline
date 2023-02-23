@@ -1,28 +1,13 @@
 import React, { memo, useCallback, useRef } from "react";
 import WidgetWrapper from "../WidgetWrapper";
 import WhiteCard from "../../WhiteCard";
-import {
-  getResinRecharge,
-  ResinCap,
-  ResinsPerCondensed,
-  ResinsPerMinute,
-  roundResin,
-} from "../../../db/resins";
+import { getResinRecharge, ResinCap, ResinsPerCondensed, ResinsPerMinute, roundResin } from "../../../db/resins";
 import SideButtons from "./SideButtons";
 import EstimatorByTime from "./EstimatorByTime";
 import EstimatorByResin from "./EstimatorByResin";
 import { Config, useConfig, useCurrentStats } from "../../../utils/config";
 import { Resin as ResinIcon } from "../../../assets";
-import {
-  Badge,
-  Button,
-  ButtonGroup,
-  chakra,
-  HStack,
-  StackDivider,
-  useColorModeValue,
-  VStack,
-} from "@chakra-ui/react";
+import { Badge, Button, ButtonGroup, chakra, HStack, StackDivider, useColorModeValue, VStack } from "@chakra-ui/react";
 import { useServerTime } from "../../../utils/time";
 import { FormattedMessage, useIntl } from "react-intl";
 import AutoSizeInput from "../../AutoSizeInput";
@@ -46,7 +31,7 @@ const Resin = () => {
     (offset: number) => {
       setResin({
         value: resin.value,
-        time: resin.time + offset * 1000,
+        time: resin.time + offset * 1000
       });
     },
     [resin]
@@ -75,8 +60,8 @@ const Resin = () => {
 
               setMode((mode) => {
                 return estimateModes[
-                  (estimateModes.indexOf(mode) + 1) % estimateModes.length
-                ];
+                (estimateModes.indexOf(mode) + 1) % estimateModes.length
+                  ];
               });
             }}
           />
@@ -99,7 +84,7 @@ const Resin = () => {
 
               setResin({
                 value: newValue,
-                time: time.valueOf(),
+                time: time.valueOf()
               });
 
               setStats(
@@ -108,7 +93,7 @@ const Resin = () => {
                     ...stats,
                     resinsSpent: roundResin(
                       stats.resinsSpent - newValue + oldValue
-                    ),
+                    )
                   }
               );
             }}
@@ -119,7 +104,7 @@ const Resin = () => {
             {current + 1 < ResinCap ? (
               (() => {
                 const duration = Duration.fromObject({
-                  minutes: (1 - (current % 1)) / ResinsPerMinute,
+                  minutes: (1 - (current % 1)) / ResinsPerMinute
                 });
                 return (
                   <>
@@ -128,7 +113,7 @@ const Resin = () => {
                     <FormattedMessage
                       defaultMessage={"Next in {nextTime}"}
                       values={{
-                        nextTime: formatResinRemainingTime(duration, time),
+                        nextTime: formatResinRemainingTime(duration, time)
                       }}
                     />
                   </>
@@ -152,17 +137,7 @@ const Resin = () => {
             />
           }
         >
-          {current >= ResinCap ? (
-            <chakra.span bg={useColorModeValue("yellow.100", "yellow.900")}>
-              <FormattedMessage defaultMessage="Your resins are full." />
-            </chakra.span>
-          ) : mode === "time" ? (
-            <EstimatorByTime />
-          ) : mode === "value" ? (
-            <EstimatorByResin />
-          ) : null}
-
-          <HStack>
+          <HStack justifyContent={"space-between"} width={"100%"}>
             <ButtonGroup isAttached>
               <Button
                 color="gray.500"
@@ -186,6 +161,16 @@ const Resin = () => {
 
             <SideButtons current={current} />
           </HStack>
+
+          {current >= ResinCap ? (
+            <chakra.span bg={useColorModeValue("yellow.100", "yellow.900")}>
+              <FormattedMessage defaultMessage="Your resins are full." />
+            </chakra.span>
+          ) : mode === "time" ? (
+            <EstimatorByTime />
+          ) : mode === "value" ? (
+            <EstimatorByResin />
+          ) : null}
         </VStack>
       </WhiteCard>
     </WidgetWrapper>

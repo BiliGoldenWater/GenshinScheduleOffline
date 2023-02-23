@@ -526,22 +526,22 @@ msgctxt "components.Home.Resin.SideButtons.9f72cf"
 msgid "Add {amount} resins"
 msgstr ""
 
-#: src/components/Home/Resin/index.tsx:153
+#: src/components/Home/Resin/index.tsx:167
 msgctxt "components.Home.Resin.index.506b0c"
 msgid "Your resins are full."
 msgstr ""
 
-#: src/components/Home/Resin/index.tsx:62
+#: src/components/Home/Resin/index.tsx:50
 msgctxt "components.Home.Resin.index.c3eb42"
 msgid "Switch estimation mode"
 msgstr ""
 
-#: src/components/Home/Resin/index.tsx:124
+#: src/components/Home/Resin/index.tsx:113
 msgctxt "components.Home.Resin.index.ed6af9"
 msgid "Next in {nextTime}"
 msgstr ""
 
-#: src/components/Home/Resin/index.tsx:56
+#: src/components/Home/Resin/index.tsx:44
 msgctxt "components.Home.Resin.index.fe85b2"
 msgid "Resin Calculator"
 msgstr ""
